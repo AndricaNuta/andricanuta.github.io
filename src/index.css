@@ -227,3 +227,10 @@
     scroll-padding-top: 5rem;
   }
 }
+
+/* View Transitions for Animated Theme Toggler */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
