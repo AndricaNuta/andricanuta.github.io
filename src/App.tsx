@@ -18,7 +18,13 @@ const ThemeStyles = () => {
 };
 
 const App = () => (
-  <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+  <ThemeProvider 
+    attribute="class" 
+    defaultTheme="system" 
+    enableSystem 
+    disableTransitionOnChange
+    storageKey="theme-preference"
+  >
     <CustomThemeProvider>
       <ThemeStyles />
       <QueryClientProvider client={queryClient}>

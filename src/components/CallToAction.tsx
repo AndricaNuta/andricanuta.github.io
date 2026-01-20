@@ -22,12 +22,17 @@ const CallToAction = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to travel smarter?
+                Start saving money on your next trip
               </h2>
-              <p className="text-white/80 text-lg mb-8 max-w-md mx-auto lg:mx-0">
-                Download now for free. No account needed, just point and convert.
+              <p className="text-white/90 text-lg md:text-xl mb-6 max-w-md mx-auto lg:mx-0 leading-relaxed">
+                Download free now—no account, no credit card, just instant currency conversion. Join smart travelers who never overpay abroad.
               </p>
-              <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
+              <div className="flex flex-col gap-4 mb-6">
+                <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
+                <p className="text-white/70 text-sm">
+                  ⚡ Instant setup • 🔒 100% private • ✨ No ads interrupting your experience
+                </p>
+              </div>
             </motion.div>
 
             {/* Phone mockups */}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface AppStoreBadgeProps {
   href?: string;
@@ -11,7 +12,10 @@ const AppStoreBadge = ({ href = "#", className = "" }: AppStoreBadgeProps) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl hover:opacity-90 transition-opacity ${className}`}
+      className={cn(
+        "inline-flex items-center gap-3 bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl hover:opacity-90 transition-opacity",
+        className
+      )}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

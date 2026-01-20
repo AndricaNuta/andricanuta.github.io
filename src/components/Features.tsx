@@ -12,33 +12,33 @@ import {
 const features = [
   {
     icon: Camera,
-    title: "Instant Scanning",
-    description: "Point your camera at any price tag, menu, or receipt. Get instant conversions with no typing required.",
-  },
-  {
-    icon: Share2,
-    title: "Easy Sharing",
-    description: "Share converted prices with friends and family. Perfect for planning group trips or shopping together.",
-  },
-  {
-    icon: Bookmark,
-    title: "Save Prices",
-    description: "Save your converted prices for later. Keep track of what you've found while traveling.",
-  },
-  {
-    icon: Languages,
-    title: "Label Translation",
-    description: "Translate price labels into any language you need. Understand what you're buying, anywhere.",
+    title: "Scan in Seconds",
+    description: "Point, scan, done. No typing, no manual entry. Get instant currency conversions from any price tag, menu, or receipt in under 2 seconds.",
   },
   {
     icon: Shield,
-    title: "100% Private",
-    description: "All processing happens on your device. Your data never leaves your phone.",
+    title: "100% Private & Secure",
+    description: "Your photos never leave your device. All processing happens locally on your phone—no cloud, no servers, no data collection.",
+  },
+  {
+    icon: Languages,
+    title: "Smart Translation",
+    description: "Not just currency conversion—translate price labels and descriptions too. Understand exactly what you're buying, in any language.",
+  },
+  {
+    icon: Bookmark,
+    title: "Save & Compare",
+    description: "Save prices as you shop to compare later. Perfect for finding the best deals across different stores or planning your travel budget.",
+  },
+  {
+    icon: Share2,
+    title: "Share Instantly",
+    description: "Share converted prices with travel companions instantly. Great for splitting bills, group shopping, or showing friends back home.",
   },
   {
     icon: Smartphone,
-    title: "Home Screen Widgets",
-    description: "Check rates at a glance with widgets for your home screen and lock screen.",
+    title: "Widgets & Quick Access",
+    description: "Check exchange rates without opening the app. Home screen and lock screen widgets keep you informed at a glance.",
   },
 ];
 
@@ -54,10 +54,10 @@ const Features = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Why travelers love CurrenSee
+            Everything you need to shop confidently abroad
           </h2>
           <p className="text-muted-foreground text-lg">
-            Everything you need for hassle-free currency conversion abroad.
+            Powerful features designed to make international travel stress-free and budget-friendly.
           </p>
         </motion.div>
 

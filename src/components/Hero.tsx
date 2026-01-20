@@ -55,20 +55,39 @@ const Hero = () => {
               </svg>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-              Scan prices.
+              Never overpay abroad again.
               <br />
-              <span className="text-gradient">Convert instantly.</span>
+              <span className="text-gradient">Scan. Convert. Save.</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Stop doing mental math abroad. CurrenSee instantly converts prices when you point your camera at any menu, receipt, or price tag.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-6 leading-relaxed">
+              Stop doing mental math abroad. Point your camera at any price tag, menu, or receipt and get instant currency conversions. No typing, no confusion—just accurate prices in your currency.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-6">
               <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
-              <p className="text-sm text-muted-foreground">
-                Free to download • 100% private
-              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground justify-center lg:justify-start">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Free to download</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>100% private</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>No account needed</span>
+              </div>
             </div>
           </motion.div>
 

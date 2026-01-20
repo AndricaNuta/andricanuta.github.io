@@ -13,10 +13,10 @@ const Pricing = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Simple pricing
+            Free forever. Premium coming soon.
           </h2>
           <p className="text-muted-foreground text-lg">
-            Start for free, upgrade when you need more.
+            Get all essential features free. Premium unlocks ad-free experience and AI-powered enhancements.
           </p>
         </motion.div>
 

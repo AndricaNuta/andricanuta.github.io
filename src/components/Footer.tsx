@@ -18,10 +18,20 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a 
+              href="https://few-cephalopod-11a.notion.site/Currency-Converter-About-Privacy-Policy-Terms-27ffb972bd6380049ba2c94b28535589" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a 
+              href="https://few-cephalopod-11a.notion.site/Currency-Converter-About-Privacy-Policy-Terms-27ffb972bd6380049ba2c94b28535589" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
               Support
             </a>
             <ThemeToggle />
