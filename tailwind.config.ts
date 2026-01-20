@@ -19,9 +19,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Manrope', 'Avenir Next', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
       },
       colors: {
+        // Brand colors
+        'currensee-purple': '#5B3FFF',
+        'pure-white': '#FFFFFF',
+        'soft-gray-bg': '#F5F6FA',
+        'neutral-gray-text': '#6B7280',
+        'success-green': '#4CD964',
+        'light-purple-tint': '#E8E6FF',
+        'dark-text-gray': '#1E1E1E',
+        'divider-gray': '#E5E7EB',
+        // System colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
