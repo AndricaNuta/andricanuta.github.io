@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Favicon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    canvas {
+      border: 1px solid #ddd;
+      margin: 20px 0;
+      display: block;
+    }
+    button {
+      background: #483AA0;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background: #3a2d80;
+    }
+    .instructions {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generate Favicon with Rounded Corners</h1>
+    <p>This tool will generate PNG and ICO favicon files with rounded corners.</p>
+    
+    <canvas id="faviconCanvas" width="512" height="512"></canvas>
+    
+    <div>
+      <button onclick="downloadPNG()">Download PNG (512x512)</button>
+      <button onclick="downloadICO()">Download ICO (32x32)</button>
+      <button onclick="downloadICO16()">Download ICO (16x16)</button>
+    </div>
+    
+    <div class="instructions">
+      <strong>Instructions:</strong>
+      <ol>
+        <li>Click the buttons above to download the favicon files</li>
+        <li>Save "favicon.png" to the <code>public/</code> folder</li>
+        <li>For ICO files, you may need to use an online converter or tool like ImageMagick</li>
+        <li>Clear your browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete) to see the new favicon</li>
+      </ol>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('faviconCanvas');
+    const ctx = canvas.getContext('2d');
+    const size = 512;
+    const cornerRadius = 112;
+    const purple = '#483AA0';
+
+    // Draw rounded rectangle background
+    ctx.fillStyle = purple;
+    ctx.beginPath();
+    ctx.moveTo(cornerRadius, 0);
+    ctx.lineTo(size - cornerRadius, 0);
+    ctx.quadraticCurveTo(size, 0, size, cornerRadius);
+    ctx.lineTo(size, size - cornerRadius);
+    ctx.quadraticCurveTo(size, size, size - cornerRadius, size);
+    ctx.lineTo(cornerRadius, size);
+    ctx.quadraticCurveTo(0, size, 0, size - cornerRadius);
+    ctx.lineTo(0, cornerRadius);
+    ctx.quadraticCurveTo(0, 0, cornerRadius, 0);
+    ctx.closePath();
+    ctx.fill();
+
+    // Draw swap icon (simplified version)
+    // You can replace this with your actual icon SVG path
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 35;
+    ctx.lineCap = 'round';
+    
+    // Draw circular arrows (simplified swap icon)
+    const centerX = size / 2;
+    const centerY = size / 2;
+    const radius = 100;
+    
+    // Top arrow
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, Math.PI * 0.25, Math.PI * 1.25);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(centerX + radius * 0.7, centerY - radius * 0.7);
+    ctx.lineTo(centerX + radius * 0.9, centerY - radius * 0.5);
+    ctx.lineTo(centerX + radius * 0.7, centerY - radius * 0.3);
+    ctx.stroke();
+    
+    // Bottom arrow
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, Math.PI * 1.25, Math.PI * 0.25);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(centerX - radius * 0.7, centerY + radius * 0.7);
+    ctx.lineTo(centerX - radius * 0.9, centerY + radius * 0.5);
+    ctx.lineTo(centerX - radius * 0.7, centerY + radius * 0.3);
+    ctx.stroke();
+
+    function downloadCanvas(filename, size) {
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = size;
+      tempCanvas.height = size;
+      const tempCtx = tempCanvas.getContext('2d');
+      tempCtx.drawImage(canvas, 0, 0, size, size);
+      
+      tempCanvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    function downloadPNG() {
+      downloadCanvas('favicon.png', 512);
+    }
+
+    function downloadICO() {
+      downloadCanvas('favicon-32.ico', 32);
+    }
+
+    function downloadICO16() {
+      downloadCanvas('favicon-16.ico', 16);
+    }
+  </script>
+</body>
+</html>

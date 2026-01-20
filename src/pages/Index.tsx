@@ -5,6 +5,7 @@ import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
+import GetUpdates from "@/components/GetUpdates";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <Pricing />
       <FAQ />
       <CallToAction />
+      <GetUpdates web3formsKey="e53984f2-18c4-4e52-98f8-9f8a26a14292" />
       <Footer />
       <FloatingCTA />
     </main>
