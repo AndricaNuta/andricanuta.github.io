@@ -24,14 +24,12 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center gap-6 text-sm">
             <a 
-              href="https://few-cephalopod-11a.notion.site/Currency-Converter-About-Privacy-Policy-Terms-27ffb972bd6380049ba2c94b28535589" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground transition-colors"
+              href="/support"
+              className="font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Support
             </a>
             <a 
               href="https://few-cephalopod-11a.notion.site/Currency-Converter-About-Privacy-Policy-Terms-27ffb972bd6380049ba2c94b28535589" 
@@ -39,7 +37,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
-              Support
+              Privacy Policy
             </a>
             <a 
               href="https://www.instagram.com/currensee.app" 
@@ -51,7 +49,7 @@ const Footer = () => {
               <Instagram className="w-5 h-5" />
               <span className="hidden sm:inline">@currensee.app</span>
             </a>
-            <a 
+            {/*<a 
               href="https://open.spotify.com/artist/YOUR_ARTIST_ID" 
               target="_blank"
               rel="noopener noreferrer"
@@ -60,7 +58,7 @@ const Footer = () => {
             >
               <Music className="w-5 h-5" />
               <span className="hidden sm:inline">Music</span>
-            </a>
+            </a>*/}
             <ThemeToggle />
           </div>
 

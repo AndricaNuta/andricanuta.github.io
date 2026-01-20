@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import currenseeLogo from "@/assets/currensee-logo.png";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
@@ -8,6 +9,8 @@ import AppStoreBadge from "./AppStoreBadge";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,15 +21,33 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+    // If not on home page, navigate to home first
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation, then scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll to section
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsMobileMenuOpen(false);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const goToHome = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      // Already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -45,11 +66,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.button
-            onClick={scrollToTop}
+            onClick={goToHome}
             className="flex items-center gap-3 group cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            aria-label="Scroll to top"
+            aria-label="Go to home"
           >
             <img
               src={currenseeLogo}
@@ -86,6 +107,7 @@ const Navigation = () => {
             <AppStoreBadge
               href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
               className="scale-90"
+              source="navigation"
             />
           </div>
 
@@ -139,6 +161,7 @@ const Navigation = () => {
                 <AppStoreBadge
                   href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
                   className="w-full"
+                  source="mobile-navigation"
                 />
               </div>
             </div>

@@ -2,7 +2,10 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TrustBadges from "@/components/TrustBadges";
 import Features from "@/components/Features";
+import HowItWorks from "@/components/HowItWorks";
+import UseCases from "@/components/UseCases";
 import Testimonials from "@/components/Testimonials";
+import RealTestimonials from "@/components/RealTestimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
@@ -16,8 +19,11 @@ const Index = () => {
       <Navigation />
       <Hero />
       <TrustBadges />
+      {/*<HowItWorks />*/}
       <Features />
+      {/* <UseCases /> */}
       <Testimonials />
+      {/* <RealTestimonials /> */}
       <Pricing />
       <FAQ />
       <CallToAction />

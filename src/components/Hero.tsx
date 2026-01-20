@@ -58,7 +58,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
-              <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
+              <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" source="hero" />
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-base text-muted-foreground justify-center lg:justify-start">

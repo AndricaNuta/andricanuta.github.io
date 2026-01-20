@@ -1,18 +1,25 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { analytics } from "@/lib/analytics";
 
 interface AppStoreBadgeProps {
   href?: string;
   className?: string;
   compact?: boolean;
+  source?: string;
 }
 
-const AppStoreBadge = ({ href = "#", className = "", compact = false }: AppStoreBadgeProps) => {
+const AppStoreBadge = ({ href = "#", className = "", compact = false, source = "unknown" }: AppStoreBadgeProps) => {
+  const handleClick = () => {
+    analytics.trackAppStoreClick(source);
+  };
+
   return (
     <motion.a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       className={cn(
         "inline-flex items-center gap-2 md:gap-3 bg-black dark:bg-white text-white dark:text-black rounded-xl hover:opacity-90 transition-opacity",
         compact 
