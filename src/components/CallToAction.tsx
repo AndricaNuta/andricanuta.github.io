@@ -5,14 +5,21 @@ import appWatchlist from "@/assets/app-screenshot-watchlist.png";
 
 const CallToAction = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background overflow-hidden">
+    <section className="py-24 lg:py-40 bg-background overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <div className="relative bg-gradient-hero rounded-3xl p-8 md:p-16 overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl" />
+        <div className="relative bg-gradient-hero rounded-3xl p-10 md:p-20 overflow-hidden shadow-2xl">
+          {/* Enhanced decorative elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse-soft" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-2xl animate-pulse-soft" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl" />
+          
+          {/* Brand pattern overlay */}
+          <div className="absolute inset-0 opacity-[0.05]" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }} />
 
-          <div className="relative grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative grid lg:grid-cols-2 gap-16 items-center">
             {/* Text */}
             <motion.div
               className="text-center lg:text-left"
@@ -21,17 +28,39 @@ const CallToAction = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <motion.div
+                className="inline-block mb-6"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <span className="text-sm font-semibold text-white/80 uppercase tracking-wider">
+                  Ready to Start?
+                </span>
+              </motion.div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                 Start saving money on your next trip
               </h2>
-              <p className="text-white/90 text-lg md:text-xl mb-6 max-w-md mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
                 Download free now—no account, no credit card, just instant currency conversion. Join smart travelers who never overpay abroad.
               </p>
-              <div className="flex flex-col gap-4 mb-6">
+              <div className="flex flex-col gap-6 mb-8">
                 <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
-                <p className="text-white/70 text-sm">
-                  ⚡ Instant setup • 🔒 100% private • ✨ No ads interrupting your experience
-                </p>
+                <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm justify-center lg:justify-start">
+                  <div className="flex items-center gap-2">
+                    <span>⚡</span>
+                    <span>Instant setup</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span>🔒</span>
+                    <span>100% private</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span>✨</span>
+                    <span>No ads interrupting</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
 

@@ -5,14 +5,20 @@ import appScreenshot from "@/assets/app-screenshot-scan.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle">
-      {/* Background decoration */}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle pt-20">
+      {/* Enhanced Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl" />
+        {/* Brand pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
       </div>
 
-      <div className="container mx-auto px-6 py-20 lg:py-32">
+      <div className="container mx-auto px-6 py-20 lg:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text content */}
           <motion.div
@@ -21,83 +27,89 @@ const Hero = () => {
             transition={{ duration: 0.7 }}
             className="text-center lg:text-left"
           >
-            <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-              <svg 
-                version="1.0" 
-                xmlns="http://www.w3.org/2000/svg"
-                width="56" 
-                height="56" 
-                viewBox="0 0 500 500"
-                preserveAspectRatio="xMidYMid meet"
-                className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 ease-in-out hover:rotate-180 cursor-pointer"
-              >
-                <g transform="translate(0,500) scale(0.1,-0.1)" fill="#483AA0">
-                  <path d="M2633 4049 c-104 -12 -214 -42 -341 -93 -397 -160 -779 -473 -1276
-                  -1046 -17 -19 14 8 69 61 604 580 1069 862 1497 908 224 24 443 -36 624 -173
-                  88 -66 229 -217 302 -323 71 -104 226 -378 243 -431 10 -31 9 -37 -7 -49 -10
-                  -8 -190 -70 -399 -138 -209 -69 -389 -131 -399 -138 -13 -9 -16 -20 -12 -34 6
-                  -19 17 -22 104 -27 53 -3 246 -9 427 -12 182 -4 369 -9 415 -13 l84 -6 60 -85
-                  c128 -182 250 -275 353 -268 48 3 48 3 66 53 36 103 10 243 -83 443 l-42 91
-                  185 348 c237 447 249 470 245 496 -7 49 -42 31 -175 -90 -71 -65 -176 -158
-                  -233 -208 -282 -244 -270 -236 -290 -225 -10 5 -66 80 -124 165 -294 431 -550
-                  656 -860 754 -140 45 -281 58 -433 40z"/>
-                  <path d="M582 2775 c-33 -41 -46 -126 -33 -207 15 -89 33 -142 91 -264 l48
-                  -102 -22 -38 c-13 -22 -94 -174 -181 -339 -87 -165 -175 -333 -197 -374 -42
-                  -81 -46 -114 -11 -119 15 -2 52 25 135 100 194 177 502 444 519 450 9 3 20 3
-                  26 0 5 -4 57 -75 115 -158 270 -387 464 -577 713 -700 163 -80 269 -104 459
-                  -104 164 0 267 18 426 76 181 65 422 209 633 379 129 104 409 375 546 528 146
-                  164 157 184 40 72 -363 -350 -667 -578 -964 -726 -228 -113 -411 -162 -605
-                  -161 -358 0 -662 211 -905 629 -32 54 -73 123 -90 153 -47 78 -85 168 -79 184
-                  7 18 45 32 452 166 183 60 342 115 353 120 26 15 24 49 -3 59 -13 4 -165 11
-                  -338 15 -173 3 -395 9 -493 13 l-178 6 -60 88 c-112 164 -232 262 -337 276
-                  -33 4 -42 2 -60 -22z"/>
-                </g>
-              </svg>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 border border-primary/20 mb-6"
+            >
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm font-medium text-primary">Trusted by travelers worldwide</span>
+            </motion.div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
               Never overpay abroad again.
               <br />
-              <span className="text-gradient">Scan. Convert. Save.</span>
+              <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/80">
+                Scan. Convert. Save.
+              </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-6 leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
               Stop doing mental math abroad. Point your camera at any price tag, menu, or receipt and get instant currency conversions. No typing, no confusion—just accurate prices in your currency.
             </p>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
               <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Free to download</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-                <span>100% private</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <span>No account needed</span>
-              </div>
+            <div className="flex flex-wrap items-center gap-6 text-base text-muted-foreground justify-center lg:justify-start">
+              <motion.div
+                className="flex items-center gap-2.5"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="font-medium">Free to download</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-2.5"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <span className="font-medium">100% private</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-2.5"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span className="font-medium">No account needed</span>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Phone mockup */}
-          <div className="relative flex justify-center lg:justify-end">
-            <PhoneMockup
-              imageSrc={appScreenshot}
-              alt="CurrenSee app scanning a restaurant menu"
-            />
-          </div>
+          <motion.div
+            className="relative flex justify-center lg:justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative">
+              <PhoneMockup
+                imageSrc={appScreenshot}
+                alt="CurrenSee app scanning a restaurant menu"
+              />
+              {/* Floating glow effect */}
+              <div className="absolute inset-0 -z-10 bg-primary/20 rounded-[3rem] blur-3xl scale-110 animate-pulse-soft" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

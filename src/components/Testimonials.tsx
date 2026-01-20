@@ -26,19 +26,36 @@ const trustFeatures = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="pt-24 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <motion.div
+            className="inline-block mb-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+              Trust & Security
+            </span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Built for travelers, by travelers
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-xl leading-relaxed">
             Everything you need to shop confidently and save money abroad
           </p>
         </motion.div>
@@ -66,28 +83,28 @@ const Testimonials = () => {
 
         {/* Trust indicators - honest metrics only */}
         <motion.div
-          className="mt-16 pt-12 border-t border-border"
+          className="mt-12 pt-8 pb-8 border-t-2 border-b-2 border-primary/20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-muted-foreground">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16 text-muted-foreground">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">100%</div>
-              <div className="text-sm">Private & Secure</div>
+              <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">100%</div>
+              <div className="text-sm font-medium">Private & Secure</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">150+</div>
-              <div className="text-sm">Currencies</div>
+              <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">150+</div>
+              <div className="text-sm font-medium">Currencies</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">Free</div>
-              <div className="text-sm">Forever</div>
+              <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">Free</div>
+              <div className="text-sm font-medium">Forever</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">0</div>
-              <div className="text-sm">Account Required</div>
+              <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">0</div>
+              <div className="text-sm font-medium">Account Required</div>
             </div>
           </div>
         </motion.div>

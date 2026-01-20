@@ -4,17 +4,23 @@ import { Instagram, Music } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-secondary/50 border-t border-border">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="py-16 bg-secondary/50 border-t border-border relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.01] dark:opacity-[0.02]" style={{
+        backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
+        backgroundSize: '40px 40px'
+      }} />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <img 
               src={currenseeLogo} 
               alt="CurrenSee Logo" 
-              className="w-8 h-8 rounded-lg"
+              className="w-10 h-10 rounded-xl transition-transform duration-300 hover:rotate-6"
             />
-            <span className="font-semibold text-foreground">CurrenSee</span>
+            <span className="text-xl font-bold text-foreground">CurrenSee</span>
           </div>
 
           {/* Links */}
