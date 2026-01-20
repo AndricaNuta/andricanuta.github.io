@@ -33,7 +33,7 @@ const Pricing = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Free forever. Premium features coming soon.
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
             Get all essential features free. Premium unlocks ad-free experience and AI-powered enhancements.
           </p>
         </motion.div>

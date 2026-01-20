@@ -53,7 +53,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-normal md:font-light">
               Stop doing mental math abroad. Point your camera at any price tag, menu, or receipt and get instant currency conversions. No typing, no confusion—just accurate prices in your currency.
             </p>
 

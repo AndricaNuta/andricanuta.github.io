@@ -56,7 +56,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Built for travelers, by travelers
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
             Everything you need to shop confidently and save money abroad
           </p>
         </motion.div>

@@ -72,7 +72,7 @@ const FAQ = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Frequently asked questions
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
             Everything you need to know about CurrenSee
           </p>
         </motion.div>

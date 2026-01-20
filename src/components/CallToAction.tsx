@@ -42,7 +42,7 @@ const CallToAction = () => {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
                 Start saving money on your next trip
               </h2>
-              <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
+              <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal md:font-light">
                 Download free now—no account, no credit card, just instant currency conversion. Join smart travelers who never overpay abroad.
               </p>
               <div className="flex flex-col gap-6 mb-8">
