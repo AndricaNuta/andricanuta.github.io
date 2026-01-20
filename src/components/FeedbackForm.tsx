@@ -70,8 +70,15 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
           }),
         });
 
+        // Check if response is ok first
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const result = await response.json();
-        if (result.success) {
+        // Consider it successful if response is ok, even if success field is not explicitly true
+        // This handles cases where web3forms sends the email but response format varies
+        if (response.ok && (result.success !== false)) {
           analytics.trackFeedbackSubmit(feedbackType || "general");
           toast({
             title: "Thank you!",
@@ -81,7 +88,7 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
           setEmail("");
           setFeedbackType("");
         } else {
-          throw new Error("Submission failed");
+          throw new Error(result.message || "Submission failed");
         }
       } else if (formspreeId) {
         const response = await fetch(`https://formspree.io/f/${formspreeId}`, {

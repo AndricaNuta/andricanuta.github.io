@@ -79,8 +79,15 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
           }),
         });
 
+        // Check if response is ok first
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const result = await response.json();
-        if (result.success) {
+        // Consider it successful if response is ok, even if success field is not explicitly true
+        // This handles cases where web3forms sends the email but response format varies
+        if (response.ok && (result.success !== false)) {
           analytics.trackEvent("support_submit", { support_type: supportType || "general" });
           toast({
             title: "Support request submitted!",
@@ -90,7 +97,7 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
           setEmail("");
           setSupportType("");
         } else {
-          throw new Error("Submission failed");
+          throw new Error(result.message || "Submission failed");
         }
       } else if (formspreeId) {
         const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
