@@ -1,5 +1,6 @@
 import currenseeLogo from "@/assets/currensee-logo.png";
 import { ThemeToggle } from "./ThemeToggle";
+import { Instagram, Music } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,6 +34,26 @@ const Footer = () => {
               className="hover:text-foreground transition-colors"
             >
               Support
+            </a>
+            <a 
+              href="https://www.instagram.com/currensee.app" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-2"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram className="w-5 h-5" />
+              <span className="hidden sm:inline">@currensee.app</span>
+            </a>
+            <a 
+              href="https://open.spotify.com/artist/YOUR_ARTIST_ID" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors flex items-center gap-2"
+              aria-label="Listen to our music"
+            >
+              <Music className="w-5 h-5" />
+              <span className="hidden sm:inline">Music</span>
             </a>
             <ThemeToggle />
           </div>
