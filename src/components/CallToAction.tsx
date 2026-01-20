@@ -27,7 +27,7 @@ const CallToAction = () => {
               <p className="text-white/80 text-lg mb-8 max-w-md mx-auto lg:mx-0">
                 Download now for free. No account needed, just point and convert.
               </p>
-              <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" className="bg-white text-foreground hover:bg-white/95" />
+              <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" />
             </motion.div>
 
             {/* Phone mockups */}

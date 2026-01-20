@@ -2,17 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
     /* Brand Colors in HSL format */
-    /* #5B3FFF -> hsl(255, 100%, 62%) */
+    /* #483AA0 -> hsl(252, 47%, 43%) */
+    /* #7965C1 -> hsl(252, 43%, 57%) */
     /* #FFFFFF -> hsl(0, 0%, 100%) */
     /* #F5F6FA -> hsl(228, 14%, 96%) */
     /* #6B7280 -> hsl(215, 16%, 47%) */
     /* #4CD964 -> hsl(132, 63%, 52%) */
-    /* #E8E6FF -> hsl(245, 100%, 94%) */
+    /* #E9E5FF -> hsl(252, 100%, 95%) */
     /* #1E1E1E -> hsl(0, 0%, 12%) */
     /* #E5E7EB -> hsl(220, 13%, 91%) */
 
@@ -25,7 +24,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
 
-    --primary: 255 100% 62%;
+    --primary: 252 47% 43%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 228 14% 96%;
@@ -34,22 +33,22 @@
     --muted: 228 14% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 245 100% 94%;
-    --accent-foreground: 255 100% 62%;
+    --accent: 252 100% 95%;
+    --accent-foreground: 252 47% 43%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 255 100% 62%;
+    --ring: 252 47% 43%;
 
     --radius: 0.75rem;
 
     /* Custom tokens - Brand colors */
-    --gradient-hero: linear-gradient(135deg, #5B3FFF 0%, #4A2FE8 100%);
+    --gradient-hero: linear-gradient(135deg, #483AA0 0%, #3D2F8A 100%);
     --gradient-subtle: linear-gradient(180deg, #F5F6FA 0%, #FFFFFF 100%);
-    --shadow-soft: 0 4px 20px -4px rgba(91, 63, 255, 0.15);
+    --shadow-soft: 0 4px 20px -4px rgba(72, 58, 160, 0.15);
     --shadow-card: 0 8px 30px -8px rgba(30, 30, 30, 0.08);
     --shadow-phone: 0 25px 50px -12px rgba(30, 30, 30, 0.25);
 
@@ -73,8 +72,8 @@
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 243 75% 65%;
-    --primary-foreground: 240 10% 6%;
+    --primary: 252 43% 57%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 240 5% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -83,14 +82,14 @@
     --muted-foreground: 240 4% 65%;
 
     --accent: 243 30% 18%;
-    --accent-foreground: 243 75% 75%;
+    --accent-foreground: 252 43% 57%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 240 5% 18%;
     --input: 240 5% 18%;
-    --ring: 243 75% 65%;
+    --ring: 252 43% 57%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -100,6 +99,9 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Dark mode gradients */
+    --gradient-subtle: linear-gradient(180deg, #161423 0%, #0F0F12 100%);
   }
 }
 
@@ -114,7 +116,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Manrope', 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Avenir Next', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
 }
 
@@ -142,5 +144,62 @@
 
   .shadow-phone {
     box-shadow: var(--shadow-phone);
+  }
+
+  /* Theme color utilities */
+  .bg-theme-bg {
+    background-color: var(--theme-bg);
+  }
+
+  .bg-theme-surface {
+    background-color: var(--theme-surface);
+  }
+
+  .bg-theme-card {
+    background-color: var(--theme-card);
+  }
+
+  .text-theme-text {
+    color: var(--theme-text);
+  }
+
+  .text-theme-subtext {
+    color: var(--theme-subtext);
+  }
+
+  .text-theme-muted {
+    color: var(--theme-muted);
+  }
+
+  .border-theme-border {
+    border-color: var(--theme-border);
+  }
+
+  .bg-theme-tint {
+    background-color: var(--theme-tint);
+  }
+
+  .text-theme-tint {
+    color: var(--theme-tint);
+  }
+
+  .text-theme-on-tint {
+    color: var(--theme-on-tint);
+  }
+
+  .bg-theme-danger {
+    background-color: var(--theme-danger);
+  }
+
+  .text-theme-danger {
+    color: var(--theme-danger);
+  }
+
+  .bg-theme-success {
+    background-color: var(--theme-success);
+  }
+
+  .text-theme-success {
+    color: var(--theme-success);
   }
 }

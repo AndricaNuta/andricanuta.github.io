@@ -1,4 +1,5 @@
 import currenseeLogo from "@/assets/currensee-logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Footer = () => {
   return (
@@ -23,6 +24,7 @@ const Footer = () => {
             <a href="#" className="hover:text-foreground transition-colors">
               Support
             </a>
+            <ThemeToggle />
           </div>
 
           {/* Copyright */}

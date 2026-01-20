@@ -31,7 +31,7 @@ const Hero = () => {
                 preserveAspectRatio="xMidYMid meet"
                 className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 ease-in-out hover:rotate-180 cursor-pointer"
               >
-                <g transform="translate(0,500) scale(0.1,-0.1)" fill="#5B3FFF">
+                <g transform="translate(0,500) scale(0.1,-0.1)" fill="#483AA0">
                   <path d="M2633 4049 c-104 -12 -214 -42 -341 -93 -397 -160 -779 -473 -1276
                   -1046 -17 -19 14 8 69 61 604 580 1069 862 1497 908 224 24 443 -36 624 -173
                   88 -66 229 -217 302 -323 71 -104 226 -378 243 -431 10 -31 9 -37 -7 -49 -10

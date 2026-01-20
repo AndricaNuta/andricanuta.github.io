@@ -15,9 +15,9 @@ const PhoneMockup = ({ imageSrc, alt, className = "" }: PhoneMockupProps) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* Phone frame */}
-      <div className="relative mx-auto w-[280px] md:w-[320px] rounded-[3rem] bg-foreground p-3 shadow-phone">
+      <div className="relative mx-auto w-[280px] md:w-[320px] rounded-[3rem] bg-black dark:bg-[#483AA0] p-3 shadow-phone">
         {/* Inner bezel */}
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-foreground">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-black dark:bg-[#483AA0]">
           {/* Screen */}
           <img
             src={imageSrc}
@@ -25,7 +25,7 @@ const PhoneMockup = ({ imageSrc, alt, className = "" }: PhoneMockupProps) => {
             className="w-full h-auto rounded-[2.3rem]"
           />
           {/* Notch */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-foreground rounded-b-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-black dark:bg-[#483AA0] rounded-b-3xl" />
         </div>
       </div>
     </motion.div>

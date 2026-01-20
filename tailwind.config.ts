@@ -19,16 +19,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Manrope', 'Avenir Next', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
+        sans: ['Avenir Next', 'Manrope', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
       },
       colors: {
         // Brand colors
-        'currensee-purple': '#5B3FFF',
+        'currensee-purple': '#483AA0',
+        'currensee-purple-tonal': '#7965C1',
         'pure-white': '#FFFFFF',
         'soft-gray-bg': '#F5F6FA',
         'neutral-gray-text': '#6B7280',
         'success-green': '#4CD964',
-        'light-purple-tint': '#E8E6FF',
+        'light-purple-tint': '#E9E5FF',
         'dark-text-gray': '#1E1E1E',
         'divider-gray': '#E5E7EB',
         // System colors
