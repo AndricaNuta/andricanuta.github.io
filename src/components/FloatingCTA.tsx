@@ -34,7 +34,7 @@ const FloatingCTA = () => {
           transition={{ duration: 0.3 }}
           className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 lg:hidden"
         >
-          <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-4 mx-4 max-w-sm">
+          <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-3 mx-4 max-w-sm">
             <button
               onClick={() => {
                 setIsDismissed(true);
@@ -46,15 +46,16 @@ const FloatingCTA = () => {
               <X className="w-4 h-4 text-muted-foreground" />
             </button>
             <div className="pr-8">
-              <p className="text-sm font-semibold text-foreground mb-2">
+              <p className="text-sm font-semibold text-foreground mb-1.5">
                 Download CurrenSee Free
               </p>
-              <p className="text-xs text-muted-foreground mb-3">
+              <p className="text-xs text-muted-foreground mb-2.5">
                 Never overpay abroad again
               </p>
               <AppStoreBadge 
                 href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
-                className="w-full justify-center"
+                className="w-full justify-center !px-3 !py-1.5 !gap-1.5"
+                compact
               />
             </div>
           </div>
