@@ -17,7 +17,7 @@ interface GetUpdatesProps {
 
 const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
   return (
-    <section className="pt-12 lg:pt-16 pb-24 lg:pb-32 bg-gradient-subtle relative overflow-hidden">
+    <section className="pt-12 lg:pt-16 pb-16 lg:pb-24 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft" />

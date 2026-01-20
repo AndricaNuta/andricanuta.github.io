@@ -44,7 +44,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 lg:py-40 bg-background relative overflow-hidden">
+    <section id="features" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]" style={{
         backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
@@ -53,7 +53,7 @@ const Features = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

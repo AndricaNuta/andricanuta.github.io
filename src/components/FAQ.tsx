@@ -43,7 +43,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-24 lg:py-40 bg-gradient-subtle relative overflow-hidden">
+    <section id="faq" className="py-16 lg:py-24 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
@@ -52,7 +52,7 @@ const FAQ = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

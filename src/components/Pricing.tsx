@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Sparkles, Zap } from "lucide-react";
+import { ShineBorder } from "./magicui/shine-border";
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 lg:py-40 bg-background relative overflow-hidden">
+    <section id="pricing" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]" style={{
         backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
@@ -12,7 +13,7 @@ const Pricing = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -76,41 +77,49 @@ const Pricing = () => {
 
           {/* Premium tier */}
           <motion.div
-            className="relative p-8 rounded-2xl bg-gradient-hero text-white overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
-            <div className="relative">
-              <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-5 h-5" />
-                <h3 className="text-xl font-semibold">Premium</h3>
+            <ShineBorder
+              borderRadius={16}
+              borderWidth={2}
+              color="rgba(255, 255, 255, 0.3)"
+              className="relative"
+            >
+              <div className="relative p-8 rounded-2xl bg-gradient-hero text-white overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                <div className="relative">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Sparkles className="w-5 h-5" />
+                    <h3 className="text-xl font-semibold">Premium</h3>
+                  </div>
+                  <p className="text-3xl font-bold mb-2">Coming soon</p>
+                  <p className="text-white/70 text-sm mb-6">
+                    Ad-free with AI-powered features
+                  </p>
+                  <ul className="space-y-3 text-sm text-white/80">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                      Everything in Free
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                      No ads, ever
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                      AI-powered improvements
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                      More features on the way...
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <p className="text-3xl font-bold mb-2">Coming soon</p>
-              <p className="text-white/70 text-sm mb-6">
-                Ad-free with AI-powered features
-              </p>
-              <ul className="space-y-3 text-sm text-white/80">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                  Everything in Free
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                  No ads, ever
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                  AI-powered improvements
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                  More features on the way...
-                </li>
-              </ul>
-            </div>
+            </ShineBorder>
           </motion.div>
         </div>
       </div>

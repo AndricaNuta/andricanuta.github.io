@@ -18,7 +18,7 @@ const Hero = () => {
         }} />
       </div>
 
-      <div className="container mx-auto px-6 py-20 lg:py-32 relative z-10">
+      <div className="container mx-auto px-6 py-16 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text content */}
           <motion.div
@@ -41,7 +41,14 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
               Never overpay abroad again.
               <br />
-              <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/80">
+              <span 
+                className="text-gradient bg-clip-text text-transparent"
+                style={{
+                  backgroundSize: "200% auto",
+                  backgroundImage: "linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.6), hsl(var(--primary)))",
+                  animation: "gradient 3s ease infinite",
+                }}
+              >
                 Scan. Convert. Save.
               </span>
             </h1>
