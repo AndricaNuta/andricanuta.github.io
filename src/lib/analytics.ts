@@ -8,6 +8,7 @@
  */
 
 let analyticsInitialized = false;
+let gaScriptLoaded = false;
 
 // Initialize analytics scripts
 export const initializeAnalytics = () => {
@@ -18,24 +19,39 @@ export const initializeAnalytics = () => {
   // Initialize Google Analytics 4
   const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
   if (gaMeasurementId) {
-    // Load GA4 script
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
-    document.head.appendChild(script1);
-
-    // Initialize gtag
+    // Initialize dataLayer and gtag function BEFORE loading script
+    // This ensures events are queued even if script hasn't loaded yet
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: any[]) {
       window.dataLayer.push(args);
     }
     (window as any).gtag = gtag;
+    
+    // Set initial config immediately (will be processed when script loads)
     gtag('js', new Date());
     gtag('config', gaMeasurementId, {
       page_path: window.location.pathname,
+      send_page_view: true,
     });
+
+    // Load GA4 script
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
     
-    console.log('[Analytics] Google Analytics 4 initialized');
+    // Wait for script to load
+    script1.onload = () => {
+      gaScriptLoaded = true;
+      console.log('[Analytics] Google Analytics 4 script loaded successfully');
+    };
+    
+    script1.onerror = () => {
+      console.error('[Analytics] Failed to load Google Analytics 4 script. This may be due to ad blockers or network issues.');
+    };
+    
+    document.head.appendChild(script1);
+    
+    console.log('[Analytics] Google Analytics 4 initialized with ID:', gaMeasurementId);
   }
 
   // Initialize Plausible Analytics
@@ -58,11 +74,28 @@ export const initializeAnalytics = () => {
 
 // Track page views
 export const trackPageView = (path: string) => {
+  const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  
   // Google Analytics 4
-  if (import.meta.env.VITE_GA_MEASUREMENT_ID && typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('config', import.meta.env.VITE_GA_MEASUREMENT_ID, {
-      page_path: path,
-    });
+  if (gaMeasurementId && typeof window !== 'undefined') {
+    // Ensure dataLayer exists
+    window.dataLayer = window.dataLayer || [];
+    
+    // Use gtag if available, otherwise queue in dataLayer
+    if ((window as any).gtag) {
+      (window as any).gtag('config', gaMeasurementId, {
+        page_path: path,
+        page_location: window.location.href,
+      });
+    } else {
+      // Queue the config if gtag isn't ready yet
+      window.dataLayer.push({
+        event: 'config',
+        'config': gaMeasurementId,
+        page_path: path,
+        page_location: window.location.href,
+      });
+    }
   }
 
   // Plausible Analytics
@@ -82,9 +115,23 @@ const trackEventInternal = (
   eventName: string,
   eventParams?: Record<string, unknown>
 ) => {
+  const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  
   // Google Analytics 4
-  if (import.meta.env.VITE_GA_MEASUREMENT_ID && typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', eventName, eventParams);
+  if (gaMeasurementId && typeof window !== 'undefined') {
+    // Ensure dataLayer exists
+    window.dataLayer = window.dataLayer || [];
+    
+    // Use gtag if available, otherwise queue in dataLayer
+    if ((window as any).gtag) {
+      (window as any).gtag('event', eventName, eventParams || {});
+    } else {
+      // Queue the event if gtag isn't ready yet
+      window.dataLayer.push({
+        event: eventName,
+        ...(eventParams || {}),
+      });
+    }
   }
 
   // Plausible Analytics
