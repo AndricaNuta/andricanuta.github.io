@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface EmailSignupProps {
   /**
@@ -156,6 +157,10 @@ const EmailSignup = ({
       }
 
       setStatus("success");
+      
+      // Track email signup
+      analytics.trackEmailSignup(web3formsKey ? 'web3forms' : formsparkId ? 'formspark' : formspreeId ? 'formspree' : 'custom');
+      
       setEmail("");
       
       // Reset success message after 3 seconds

@@ -7,6 +7,55 @@
  * To use with custom analytics, implement the trackEvent function
  */
 
+let analyticsInitialized = false;
+
+// Initialize analytics scripts
+export const initializeAnalytics = () => {
+  if (typeof window === 'undefined' || analyticsInitialized) return;
+  
+  analyticsInitialized = true;
+
+  // Initialize Google Analytics 4
+  const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  if (gaMeasurementId) {
+    // Load GA4 script
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
+    document.head.appendChild(script1);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    (window as any).gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', gaMeasurementId, {
+      page_path: window.location.pathname,
+    });
+    
+    console.log('[Analytics] Google Analytics 4 initialized');
+  }
+
+  // Initialize Plausible Analytics
+  const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN;
+  if (plausibleDomain) {
+    const script2 = document.createElement('script');
+    script2.defer = true;
+    script2.setAttribute('data-domain', plausibleDomain);
+    script2.src = 'https://plausible.io/js/script.js';
+    document.head.appendChild(script2);
+    
+    console.log('[Analytics] Plausible Analytics initialized');
+  }
+
+  // If no analytics configured, log to console
+  if (!gaMeasurementId && !plausibleDomain) {
+    console.warn('[Analytics] No analytics provider configured. Set VITE_GA_MEASUREMENT_ID or VITE_PLAUSIBLE_DOMAIN');
+  }
+};
+
 // Track page views
 export const trackPageView = (path: string) => {
   // Google Analytics 4
@@ -80,6 +129,36 @@ export const analytics = {
   // Feature interest
   trackFeatureInterest: (featureName: string) => {
     trackEvent('feature_interest', { feature_name: featureName });
+  },
+
+  // Pricing plan view
+  trackPricingView: (planName: string) => {
+    trackEvent('pricing_view', { plan_name: planName });
+  },
+
+  // Pricing plan click
+  trackPricingClick: (planName: string, location: string) => {
+    trackEvent('pricing_click', { plan_name: planName, location });
+  },
+
+  // Support/Contact form submission
+  trackSupportSubmit: (formType: string) => {
+    trackEvent('support_submit', { form_type: formType });
+  },
+
+  // Video/Media play
+  trackMediaPlay: (mediaType: string, mediaName: string) => {
+    trackEvent('media_play', { media_type: mediaType, media_name: mediaName });
+  },
+
+  // Download/Install attempt
+  trackDownload: (platform: string, source: string) => {
+    trackEvent('download', { platform, source });
+  },
+
+  // Time on page (tracked via scroll depth)
+  trackEngagement: (metric: string, value: number) => {
+    trackEvent('engagement', { metric, value });
   },
 };
 

@@ -60,6 +60,74 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Analytics Setup
+
+This project includes built-in analytics support for tracking visitors and business metrics. 
+
+### Quick Setup
+
+1. **Copy the environment file:**
+   ```sh
+   cp .env.example .env
+   ```
+
+2. **Choose an analytics provider:**
+
+   **Option A: Google Analytics 4 (Recommended)**
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - **If you already have analytics for your mobile app:** Create a **new property** for your website (Admin → Create Property → Web)
+   - **If starting fresh:** Create a new property
+   - Get your Measurement ID (format: `G-XXXXXXXXXX`)
+   - Add it to `.env`:
+     ```
+     VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+     ```
+   - 📖 **Detailed setup:** See [ANALYTICS_SETUP.md](./ANALYTICS_SETUP.md) for step-by-step instructions
+
+   **Option B: Plausible Analytics (Privacy-focused)**
+   - Sign up at [Plausible](https://plausible.io/)
+   - Add your domain
+   - Add it to `.env`:
+     ```
+     VITE_PLAUSIBLE_DOMAIN=yourdomain.com
+     ```
+
+   **Option C: Use Both**
+   - You can configure both providers simultaneously
+
+3. **Restart your dev server** after adding environment variables
+
+### What Gets Tracked
+
+The analytics automatically tracks:
+- **Page views** - Every page visit and route change
+- **Section views** - When users scroll to different sections
+- **App Store clicks** - Clicks on App Store badges
+- **CTA clicks** - All call-to-action button clicks
+- **Email signups** - Form submissions
+- **Feedback submissions** - User feedback
+- **Feature interactions** - Interest in specific features
+- **Pricing views/clicks** - Engagement with pricing plans
+- **Support form submissions** - Contact form usage
+- **Media plays** - Video or media interactions
+- **Downloads** - App download attempts
+
+### Using Analytics in Your Code
+
+```typescript
+import { analytics } from '@/lib/analytics';
+
+// Track custom events
+analytics.trackCTAClick('Get Started', 'hero-section');
+analytics.trackEmailSignup('footer-form');
+analytics.trackPricingClick('pro', 'pricing-section');
+```
+
+### Viewing Analytics Data
+
+- **Google Analytics**: Visit [analytics.google.com](https://analytics.google.com/) and navigate to your property
+- **Plausible**: Visit your Plausible dashboard
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

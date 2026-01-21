@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { analytics } from "@/lib/analytics";
 
 const faqs = [
   {
@@ -42,6 +44,29 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const [openItem, setOpenItem] = useState<string>("");
+
+  const handleValueChange = (value: string) => {
+    // Track analytics when an item opens (before updating state)
+    if (value && value !== openItem) {
+      try {
+        const index = parseInt(value.replace('item-', ''), 10);
+        if (!isNaN(index) && index >= 0 && index < faqs.length && faqs[index] && analytics) {
+          analytics.trackEvent('faq_open', { 
+            question_index: index,
+            question: faqs[index].question.substring(0, 50) 
+          });
+        }
+      } catch (error) {
+        // Silently fail - don't break the UI
+        console.error('FAQ analytics error:', error);
+      }
+    }
+    
+    // Update state after tracking
+    setOpenItem(value);
+  };
+
   return (
     <section id="faq" className="py-16 lg:py-24 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration */}
@@ -84,7 +109,13 @@ const FAQ = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion 
+            type="single" 
+            collapsible 
+            className="w-full"
+            value={openItem}
+            onValueChange={handleValueChange}
+          >
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}

@@ -11,7 +11,9 @@ interface AppStoreBadgeProps {
 
 const AppStoreBadge = ({ href = "#", className = "", compact = false, source = "unknown" }: AppStoreBadgeProps) => {
   const handleClick = () => {
+    // Track both app store click and download events
     analytics.trackAppStoreClick(source);
+    analytics.trackDownload('ios', source);
   };
 
   return (

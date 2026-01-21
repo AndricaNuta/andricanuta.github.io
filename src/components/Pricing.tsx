@@ -1,8 +1,38 @@
 import { motion } from "framer-motion";
 import { Sparkles, Zap } from "lucide-react";
 import { ShineBorder } from "./magicui/shine-border";
+import { analytics } from "@/lib/analytics";
+import { useEffect, useRef } from "react";
 
 const Pricing = () => {
+  const hasTrackedView = useRef(false);
+
+  useEffect(() => {
+    // Track when pricing section comes into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasTrackedView.current) {
+            hasTrackedView.current = true;
+            analytics.trackPricingView('pricing_section');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const section = document.getElementById('pricing');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
     <section id="pricing" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       {/* Subtle background pattern */}

@@ -5,6 +5,7 @@ import currenseeLogo from "@/assets/currensee-logo.png";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import AppStoreBadge from "./AppStoreBadge";
+import { analytics } from "@/lib/analytics";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -85,19 +86,28 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => scrollToSection("features")}
+              onClick={() => {
+                analytics.trackEvent('navigation_click', { destination: 'features' });
+                scrollToSection("features");
+              }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
+              onClick={() => {
+                analytics.trackEvent('navigation_click', { destination: 'pricing' });
+                scrollToSection("pricing");
+              }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Pricing
             </button>
             <button
-              onClick={() => scrollToSection("faq")}
+              onClick={() => {
+                analytics.trackEvent('navigation_click', { destination: 'faq' });
+                scrollToSection("faq");
+              }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               FAQ
@@ -140,19 +150,28 @@ const Navigation = () => {
           >
             <div className="container mx-auto px-6 py-6 space-y-4">
               <button
-                onClick={() => scrollToSection("features")}
+                onClick={() => {
+                  analytics.trackEvent('navigation_click', { destination: 'features', device: 'mobile' });
+                  scrollToSection("features");
+                }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
                 Features
               </button>
               <button
-                onClick={() => scrollToSection("pricing")}
+                onClick={() => {
+                  analytics.trackEvent('navigation_click', { destination: 'pricing', device: 'mobile' });
+                  scrollToSection("pricing");
+                }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
                 Pricing
               </button>
               <button
-                onClick={() => scrollToSection("faq")}
+                onClick={() => {
+                  analytics.trackEvent('navigation_click', { destination: 'faq', device: 'mobile' });
+                  scrollToSection("faq");
+                }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
                 FAQ

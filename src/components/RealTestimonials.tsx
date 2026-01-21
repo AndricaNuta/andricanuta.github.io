@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 // Placeholder testimonials - replace with real ones as you collect them
 const testimonials = [
@@ -149,6 +150,10 @@ const RealTestimonials = () => {
             className="inline-block"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              analytics.trackAppStoreClick('testimonials');
+              analytics.trackDownload('ios', 'testimonials');
+            }}
           >
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors">
               <span>Download Now</span>
