@@ -19,39 +19,45 @@ export const initializeAnalytics = () => {
   // Initialize Google Analytics 4
   const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
   if (gaMeasurementId) {
-    // Initialize dataLayer and gtag function BEFORE loading script
-    // This ensures events are queued even if script hasn't loaded yet
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
-    (window as any).gtag = gtag;
-    
-    // Set initial config immediately (will be processed when script loads)
-    gtag('js', new Date());
-    gtag('config', gaMeasurementId, {
-      page_path: window.location.pathname,
-      send_page_view: true,
-    });
+    // Check if GA script was already injected in HTML (via Vite plugin)
+    // If gtag already exists, it means the script was injected in <head>
+    if ((window as any).gtag && (window as any).dataLayer) {
+      // Script already loaded from HTML, just ensure dataLayer exists
+      window.dataLayer = window.dataLayer || [];
+      console.log('[Analytics] Google Analytics 4 already loaded from HTML head');
+    } else {
+      // Fallback: Load GA4 script dynamically if not in HTML
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      (window as any).gtag = gtag;
+      
+      // Set initial config immediately (will be processed when script loads)
+      gtag('js', new Date());
+      gtag('config', gaMeasurementId, {
+        page_path: window.location.pathname,
+        send_page_view: true,
+      });
 
-    // Load GA4 script
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
-    
-    // Wait for script to load
-    script1.onload = () => {
-      gaScriptLoaded = true;
-      console.log('[Analytics] Google Analytics 4 script loaded successfully');
-    };
-    
-    script1.onerror = () => {
-      console.error('[Analytics] Failed to load Google Analytics 4 script. This may be due to ad blockers or network issues.');
-    };
-    
-    document.head.appendChild(script1);
-    
-    console.log('[Analytics] Google Analytics 4 initialized with ID:', gaMeasurementId);
+      // Load GA4 script
+      const script1 = document.createElement('script');
+      script1.async = true;
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
+      
+      // Wait for script to load
+      script1.onload = () => {
+        gaScriptLoaded = true;
+        console.log('[Analytics] Google Analytics 4 script loaded successfully');
+      };
+      
+      script1.onerror = () => {
+        console.error('[Analytics] Failed to load Google Analytics 4 script. This may be due to ad blockers or network issues.');
+      };
+      
+      document.head.appendChild(script1);
+      console.log('[Analytics] Google Analytics 4 initialized dynamically with ID:', gaMeasurementId);
+    }
   }
 
   // Initialize Plausible Analytics
