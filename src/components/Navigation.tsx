@@ -22,6 +22,8 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setIsMobileMenuOpen(false);
+    
     // If not on home page, navigate to home first
     if (location.pathname !== "/") {
       navigate("/");
@@ -29,17 +31,23 @@ const Navigation = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.warn(`Element with id "${id}" not found`);
         }
-      }, 100);
+      }, 150);
     } else {
       // Already on home page, just scroll to section
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      // Use setTimeout to ensure it happens after any state updates
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.warn(`Element with id "${id}" not found`);
+        }
+      }, 0);
     }
-    setIsMobileMenuOpen(false);
   };
 
   const goToHome = () => {
@@ -87,8 +95,12 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => {
-                analytics.trackEvent('navigation_click', { destination: 'features' });
                 scrollToSection("features");
+                try {
+                  analytics.trackEvent('navigation_click', { destination: 'features' });
+                } catch (e) {
+                  // Ignore analytics errors
+                }
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -96,8 +108,12 @@ const Navigation = () => {
             </button>
             <button
               onClick={() => {
-                analytics.trackEvent('navigation_click', { destination: 'pricing' });
                 scrollToSection("pricing");
+                try {
+                  analytics.trackEvent('navigation_click', { destination: 'pricing' });
+                } catch (e) {
+                  // Ignore analytics errors
+                }
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -105,8 +121,12 @@ const Navigation = () => {
             </button>
             <button
               onClick={() => {
-                analytics.trackEvent('navigation_click', { destination: 'faq' });
                 scrollToSection("faq");
+                try {
+                  analytics.trackEvent('navigation_click', { destination: 'faq' });
+                } catch (e) {
+                  // Ignore analytics errors
+                }
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -151,8 +171,12 @@ const Navigation = () => {
             <div className="container mx-auto px-6 py-6 space-y-4">
               <button
                 onClick={() => {
-                  analytics.trackEvent('navigation_click', { destination: 'features', device: 'mobile' });
                   scrollToSection("features");
+                  try {
+                    analytics.trackEvent('navigation_click', { destination: 'features', device: 'mobile' });
+                  } catch (e) {
+                    // Ignore analytics errors
+                  }
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
@@ -160,8 +184,12 @@ const Navigation = () => {
               </button>
               <button
                 onClick={() => {
-                  analytics.trackEvent('navigation_click', { destination: 'pricing', device: 'mobile' });
                   scrollToSection("pricing");
+                  try {
+                    analytics.trackEvent('navigation_click', { destination: 'pricing', device: 'mobile' });
+                  } catch (e) {
+                    // Ignore analytics errors
+                  }
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
@@ -169,8 +197,12 @@ const Navigation = () => {
               </button>
               <button
                 onClick={() => {
-                  analytics.trackEvent('navigation_click', { destination: 'faq', device: 'mobile' });
                   scrollToSection("faq");
+                  try {
+                    analytics.trackEvent('navigation_click', { destination: 'faq', device: 'mobile' });
+                  } catch (e) {
+                    // Ignore analytics errors
+                  }
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >

@@ -78,9 +78,9 @@ export const trackPageView = (path: string) => {
 };
 
 // Track custom events
-export const trackEvent = (
+const trackEventInternal = (
   eventName: string,
-  eventParams?: Record<string, any>
+  eventParams?: Record<string, unknown>
 ) => {
   // Google Analytics 4
   if (import.meta.env.VITE_GA_MEASUREMENT_ID && typeof window !== 'undefined' && (window as any).gtag) {
@@ -99,8 +99,16 @@ export const trackEvent = (
   }
 };
 
+// Export trackEvent for direct use
+export const trackEvent = trackEventInternal;
+
 // Common event tracking helpers
 export const analytics = {
+  // Generic event tracking (for custom events)
+  trackEvent: (eventName: string, eventParams?: Record<string, unknown>) => {
+    trackEventInternal(eventName, eventParams);
+  },
+
   // App Store badge clicks
   trackAppStoreClick: (source: string) => {
     trackEvent('app_store_click', { source });
@@ -159,6 +167,16 @@ export const analytics = {
   // Time on page (tracked via scroll depth)
   trackEngagement: (metric: string, value: number) => {
     trackEvent('engagement', { metric, value });
+  },
+
+  // Floating CTA view
+  trackFloatingCTAView: () => {
+    trackEvent('floating_cta_view');
+  },
+
+  // Floating CTA dismiss
+  trackFloatingCTADismiss: () => {
+    trackEvent('floating_cta_dismiss');
   },
 };
 
