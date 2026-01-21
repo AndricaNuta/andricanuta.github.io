@@ -28,32 +28,11 @@
     <meta name="instagram:creator" content="@currensee.app" />
     
     <link rel="canonical" href="/" />
-  
-    <!-- Google Analytics 4 -->
-    
-    <script>
-      // Restore path from query parameter (set by 404.html redirect)
-      (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
-          }).join('?');
-          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
-        }
-      })(window.location);
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ8DGDVJCK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CJ8DGDVJCK');
-    </script>
-    <script type="module" crossorigin src="/assets/index-B7qDztdn.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BAMlI9qH.css">
   </head>
 
   <body>
     <div id="root"></div>
+    <!-- This file will be overwritten by the build process -->
+    <!-- The vite plugin copies index.html to 404.html after build -->
   </body>
 </html>
