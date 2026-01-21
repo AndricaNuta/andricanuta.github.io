@@ -69,10 +69,10 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-16 lg:py-24 bg-gradient-subtle relative overflow-hidden">
-      {/* Background decoration */}
+      {/* Background decoration - Optimized for Safari */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl blur-optimized" style={{ willChange: 'filter', transform: 'translateZ(0)' }} />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl blur-optimized" style={{ willChange: 'filter', transform: 'translateZ(0)' }} />
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -81,14 +81,16 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          style={{ willChange: 'transform, opacity' }}
         >
           <motion.div
             className="inline-block mb-4"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: 'transform, opacity' }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
               Got Questions?
@@ -107,7 +109,8 @@ const FAQ = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          style={{ willChange: 'transform, opacity' }}
         >
           <Accordion 
             type="single" 

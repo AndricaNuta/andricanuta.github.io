@@ -6,15 +6,16 @@ import appScreenshot from "@/assets/app-screenshot-scan.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle pt-20">
-      {/* Enhanced Background decoration */}
+      {/* Enhanced Background decoration - Optimized for Safari */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft blur-optimized" style={{ willChange: 'filter, opacity', transform: 'translateZ(0)' }} />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-soft blur-optimized" style={{ animationDelay: '1.5s', willChange: 'filter, opacity', transform: 'translateZ(0)' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl blur-optimized" style={{ willChange: 'filter', transform: 'translateZ(0)' }} />
         {/* Brand pattern overlay */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
+          backgroundSize: '40px 40px',
+          willChange: 'auto'
         }} />
       </div>
 
@@ -24,15 +25,17 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center lg:text-left"
+            style={{ willChange: 'transform, opacity' }}
           >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 border border-primary/20 mb-6"
+              style={{ willChange: 'transform, opacity' }}
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm font-medium text-primary">Trusted by travelers worldwide</span>
@@ -65,7 +68,8 @@ const Hero = () => {
               <motion.div
                 className="flex items-center gap-2.5"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                style={{ willChange: 'transform' }}
               >
                 <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +81,8 @@ const Hero = () => {
               <motion.div
                 className="flex items-center gap-2.5"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                style={{ willChange: 'transform' }}
               >
                 <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +94,8 @@ const Hero = () => {
               <motion.div
                 className="flex items-center gap-2.5"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                style={{ willChange: 'transform' }}
               >
                 <div className="w-6 h-6 rounded-full bg-success-green/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,15 +112,16 @@ const Hero = () => {
             className="relative flex justify-center lg:justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: 'transform, opacity' }}
           >
             <div className="relative">
               <PhoneMockup
                 imageSrc={appScreenshot}
                 alt="CurrenSee app scanning a restaurant menu"
               />
-              {/* Floating glow effect */}
-              <div className="absolute inset-0 -z-10 bg-primary/20 rounded-[3rem] blur-3xl scale-110 animate-pulse-soft" />
+              {/* Floating glow effect - Optimized for Safari */}
+              <div className="absolute inset-0 -z-10 bg-primary/20 rounded-[3rem] blur-3xl scale-110 animate-pulse-soft blur-optimized" style={{ willChange: 'filter, opacity', transform: 'translateZ(0) scale(1.1)' }} />
             </div>
           </motion.div>
         </div>

@@ -8,10 +8,10 @@ const CallToAction = () => {
     <section className="py-16 lg:py-24 bg-background overflow-hidden relative">
       <div className="container mx-auto px-6">
         <div className="relative bg-gradient-hero rounded-3xl p-10 md:p-20 overflow-hidden shadow-2xl">
-          {/* Enhanced decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse-soft" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-2xl animate-pulse-soft" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl" />
+          {/* Enhanced decorative elements - Optimized for Safari */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse-soft blur-optimized" style={{ willChange: 'filter, opacity', transform: 'translateZ(0)' }} />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-2xl animate-pulse-soft blur-optimized" style={{ animationDelay: '1s', willChange: 'filter, opacity', transform: 'translateZ(0)' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl blur-optimized" style={{ willChange: 'filter', transform: 'translateZ(0)' }} />
           
           {/* Brand pattern overlay */}
           <div className="absolute inset-0 opacity-[0.05]" style={{
@@ -26,14 +26,16 @@ const CallToAction = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+              style={{ willChange: 'transform, opacity' }}
             >
               <motion.div
                 className="inline-block mb-6"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+                style={{ willChange: 'transform, opacity' }}
               >
                 <span className="text-sm font-semibold text-white/80 uppercase tracking-wider">
                   Ready to Start?
@@ -70,7 +72,8 @@ const CallToAction = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="relative -mb-16 transform -rotate-6">
                 <div className="w-[180px] rounded-[2rem] bg-white/10 p-2 shadow-xl">
