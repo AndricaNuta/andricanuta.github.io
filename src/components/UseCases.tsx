@@ -77,7 +77,7 @@ const UseCases = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Perfect for every travel situation
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
             See how CurrenSee helps travelers save money and shop confidently in real situations
           </p>
         </motion.div>

@@ -156,7 +156,7 @@ const DeveloperFeedback = ({ web3formsKey, formspreeId }: DeveloperFeedbackProps
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Share your feedback
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
             We're actively developing CurrenSee and your feedback helps us build a better app. Share your ideas, report bugs, or tell us what you'd like to see next.
           </p>
         </motion.div>

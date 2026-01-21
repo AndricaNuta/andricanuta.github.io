@@ -70,7 +70,7 @@ const HowItWorks = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             How it works
           </h2>
-          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
+          <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
             Four simple steps to never overpay abroad again
           </p>
         </motion.div>

@@ -50,7 +50,7 @@ const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
             Be the first to know
           </h2>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed font-normal md:font-light max-w-xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed font-normal md:font-normal max-w-xl mx-auto">
             Get notified when we launch new features, improvements, and updates. We'll only email you when there's something worth sharing.
           </p>
 

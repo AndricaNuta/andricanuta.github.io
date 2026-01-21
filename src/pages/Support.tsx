@@ -43,7 +43,7 @@ const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formsp
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Support & Feedback
               </h1>
-              <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-light">
+              <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
                 Need help with the app or have feedback to share? Choose the option that best fits your needs.
               </p>
             </motion.div>
