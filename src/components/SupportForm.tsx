@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { HelpCircle, AlertCircle, MessageCircle, Settings } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -19,14 +20,15 @@ interface SupportFormProps {
   formspreeId?: string;
 }
 
-const supportTypes = [
-  { value: "technical", label: "Technical Issue", icon: Settings },
-  { value: "question", label: "General Question", icon: MessageCircle },
-  { value: "bug", label: "Bug Report", icon: AlertCircle },
-  { value: "other", label: "Other", icon: HelpCircle },
-];
-
 const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
+  const { t } = useTranslation();
+  
+  const supportTypes = [
+    { value: "technical", label: t('supportForm.supportTypes.technical'), icon: Settings },
+    { value: "question", label: t('supportForm.supportTypes.question'), icon: MessageCircle },
+    { value: "bug", label: t('supportForm.supportTypes.bug'), icon: AlertCircle },
+    { value: "other", label: t('supportForm.supportTypes.other'), icon: HelpCircle },
+  ];
   const [supportType, setSupportType] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -38,8 +40,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
     
     if (!message.trim()) {
       toast({
-        title: "Message required",
-        description: "Please enter your support request message.",
+        title: t('supportForm.messageRequired'),
+        description: t('supportForm.messageRequiredDesc'),
         variant: "destructive",
       });
       return;
@@ -47,8 +49,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
 
     if (!email.trim()) {
       toast({
-        title: "Email required",
-        description: "Please enter your email so we can respond to your support request.",
+        title: t('supportForm.emailRequired'),
+        description: t('supportForm.emailRequiredDesc'),
         variant: "destructive",
       });
       return;
@@ -90,8 +92,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
         if (response.ok && (result.success !== false)) {
           analytics.trackEvent("support_submit", { support_type: supportType || "general" });
           toast({
-            title: "Support request submitted!",
-            description: "We've received your request and will get back to you soon.",
+            title: t('supportForm.successTitle'),
+            description: t('supportForm.successDescription'),
           });
           setMessage("");
           setEmail("");
@@ -111,8 +113,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
         if (response.ok) {
           analytics.trackEvent("support_submit", { support_type: supportType || "general" });
           toast({
-            title: "Support request submitted!",
-            description: "We've received your request and will get back to you soon.",
+            title: t('supportForm.successTitle'),
+            description: t('supportForm.successDescription'),
           });
           setMessage("");
           setEmail("");
@@ -124,8 +126,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
         // Fallback: just show success (for development)
         analytics.trackEvent("support_submit", { support_type: supportType || "general" });
         toast({
-          title: "Support request submitted!",
-          description: "We've received your request. (Note: Form submission not configured)",
+          title: t('supportForm.successTitle'),
+          description: t('supportForm.successDescription'),
         });
         setMessage("");
         setEmail("");
@@ -133,8 +135,8 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to submit support request. Please try again later.",
+        title: t('supportForm.errorTitle'),
+        description: t('supportForm.errorDescription'),
         variant: "destructive",
       });
     } finally {
@@ -152,10 +154,10 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Support Type */}
         <div className="space-y-2">
-          <Label htmlFor="support-type">What do you need help with? *</Label>
+          <Label htmlFor="support-type">{t('supportForm.supportTypeLabel')}</Label>
           <Select value={supportType} onValueChange={setSupportType} required>
             <SelectTrigger id="support-type">
-              <SelectValue placeholder="Select support type" />
+              <SelectValue placeholder={t('supportForm.supportTypePlaceholder')} />
             </SelectTrigger>
             <SelectContent>
               {supportTypes.map((type) => (
@@ -172,27 +174,27 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
 
         {/* Email */}
         <div className="space-y-2">
-          <Label htmlFor="support-email">Your email *</Label>
+          <Label htmlFor="support-email">{t('supportForm.emailLabel')}</Label>
           <input
             id="support-email"
             type="email"
-            placeholder="your@email.com"
+            placeholder={t('supportForm.emailPlaceholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             required
           />
           <p className="text-xs text-muted-foreground">
-            We need your email to respond to your support request.
+            {t('supportForm.emailHelp')}
           </p>
         </div>
 
         {/* Message */}
         <div className="space-y-2">
-          <Label htmlFor="support-message">Describe your issue or question *</Label>
+          <Label htmlFor="support-message">{t('supportForm.messageLabel')}</Label>
           <Textarea
             id="support-message"
-            placeholder="Please provide as much detail as possible about your issue or question..."
+            placeholder={t('supportForm.messagePlaceholder')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
@@ -208,14 +210,14 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
           size="lg"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Submitting..." : "Submit Support Request"}
+          {isSubmitting ? t('supportForm.submitting') : t('supportForm.submit')}
         </Button>
 
         {!web3formsKey && !formspreeId && (
           <div className="bg-muted/50 border border-border rounded-lg p-4 text-sm text-muted-foreground">
-            <p className="font-semibold mb-2">Development Mode</p>
+            <p className="font-semibold mb-2">{t('supportForm.devMode')}</p>
             <p>
-              To enable support request collection, add your Web3Forms key or Formspree ID to this component.
+              {t('supportForm.devModeDesc')}
             </p>
           </div>
         )}
@@ -231,11 +233,11 @@ const SupportForm = ({ web3formsKey, formspreeId }: SupportFormProps) => {
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <HelpCircle className="w-4 h-4 text-primary" />
-            <span>We typically respond within 24 hours</span>
+            <span>{t('supportForm.responseTime')}</span>
           </div>
           <div className="flex items-center gap-2">
             <AlertCircle className="w-4 h-4 text-primary" />
-            <span>Check FAQ for common questions</span>
+            <span>{t('supportForm.checkFAQ')}</span>
           </div>
         </div>
       </motion.div>

@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Trusted by travelers worldwide",
+    "title": "Never overpay abroad again.",
+    "titleHighlight": "Scan. Convert. Save.",
+    "description": "Stop doing mental math abroad. Point your camera at any price tag, menu, or receipt and get instant currency conversions. No typing, no confusion—just accurate prices in your currency.",
+    "freeToDownload": "Free to download",
+    "private": "100% private",
+    "noAccount": "No account needed"
+  },
+  "trustBadges": {
+    "private": "100% Private",
+    "currencies": "150+ Currencies",
+    "noAccount": "No Account Needed",
+    "instant": "Instant Conversion"
+  },
+  "features": {
+    "badge": "Powerful Features",
+    "title": "Everything you need to shop confidently abroad",
+    "description": "Powerful features designed to make international travel stress-free and budget-friendly.",
+    "scan": {
+      "title": "Scan in Seconds",
+      "description": "Point, scan, done. No typing, no manual entry. Get instant currency conversions from any price tag, menu, or receipt in under 2 seconds."
+    },
+    "private": {
+      "title": "100% Private & Secure",
+      "description": "Your photos never leave your device. All processing happens locally on your phone—no cloud, no servers, no data collection."
+    },
+    "translation": {
+      "title": "Smart Translation",
+      "description": "Not just currency conversion—translate price labels and descriptions too. Understand exactly what you're buying, in any language."
+    },
+    "save": {
+      "title": "Save & Compare",
+      "description": "Save prices as you shop to compare later. Perfect for finding the best deals across different stores or planning your travel budget."
+    },
+    "share": {
+      "title": "Share Instantly",
+      "description": "Share converted prices with travel companions instantly. Great for splitting bills, group shopping, or showing friends back home."
+    },
+    "widgets": {
+      "title": "Widgets & Quick Access",
+      "description": "Check exchange rates without opening the app. Home screen and lock screen widgets keep you informed at a glance."
+    }
+  },
+  "testimonials": {
+    "badge": "Trust & Security",
+    "title": "Built for travelers, by travelers",
+    "description": "Everything you need to shop confidently and save money abroad",
+    "private": {
+      "title": "100% Private",
+      "description": "All processing happens on your device. Your photos never leave your phone."
+    },
+    "fast": {
+      "title": "Lightning Fast",
+      "description": "Get instant conversions in under 2 seconds. No waiting, no delays."
+    },
+    "currencies": {
+      "title": "150+ Currencies",
+      "description": "Works with all major currencies worldwide. Convert anywhere you travel."
+    },
+    "noAccount": {
+      "title": "No Account Required",
+      "description": "Start using immediately. No sign-up, no email, no personal data collected."
+    },
+    "metrics": {
+      "private": "Private & Secure",
+      "currencies": "Currencies",
+      "forever": "Forever",
+      "accountRequired": "Account Required"
+    }
+  },
+  "pricing": {
+    "badge": "Simple Pricing",
+    "title": "Free forever. Premium features coming soon.",
+    "description": "Get all essential features free. Premium unlocks ad-free experience and AI-powered enhancements.",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "subtitle": "Ad-supported — hey, it's free!",
+      "features": {
+        "scanning": "Instant price scanning",
+        "share": "Share & save prices",
+        "translation": "Label translation",
+        "widgets": "Home screen widgets"
+      }
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "Coming soon",
+      "subtitle": "Ad-free with AI-powered features",
+      "features": {
+        "everything": "Everything in Free",
+        "noAds": "No ads, ever",
+        "ai": "AI-powered improvements",
+        "more": "More features on the way..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "Got Questions?",
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know about CurrenSee",
+    "items": {
+      "scanning": {
+        "question": "How does the price scanning work?",
+        "answer": "Simply point your camera at any price tag, menu, or receipt. Our app uses advanced OCR (Optical Character Recognition) to detect prices and instantly converts them to your preferred currency using real-time exchange rates."
+      },
+      "internet": {
+        "question": "Do I need an internet connection?",
+        "answer": "The app works best with an internet connection for real-time exchange rates. However, you can save exchange rates for offline use, and basic scanning features work offline once the app is loaded."
+      },
+      "privacy": {
+        "question": "Is my data private and secure?",
+        "answer": "Absolutely! All image processing happens directly on your device. We never send your photos or scanned data to our servers. Your privacy is our top priority—100% of the processing is done locally on your phone."
+      },
+      "currencies": {
+        "question": "Which currencies are supported?",
+        "answer": "CurrenSee supports over 150 currencies worldwide, including all major currencies like USD, EUR, GBP, JPY, CNY, and many more. You can convert between any supported currencies."
+      },
+      "free": {
+        "question": "Is the app really free?",
+        "answer": "Yes! The app is completely free to download and use. The free version includes all core features: price scanning, currency conversion, label translation, and price saving. There are optional ads, but they don't interfere with the core functionality."
+      },
+      "account": {
+        "question": "Can I use it without creating an account?",
+        "answer": "Yes! CurrenSee works completely without requiring an account. Just download, open, and start scanning. No sign-up, no email, no hassle."
+      },
+      "rates": {
+        "question": "How accurate are the exchange rates?",
+        "answer": "We use real-time exchange rates from reliable financial data providers. Rates are updated frequently throughout the day to ensure accuracy. Note that actual conversion rates may vary slightly when you make purchases, as banks and payment processors may apply their own fees."
+      },
+      "countries": {
+        "question": "Does it work in all countries?",
+        "answer": "Yes! CurrenSee works anywhere in the world. As long as you can see a price tag, menu, or receipt, you can scan and convert it. The app supports prices in any language and format."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Ready to Start?",
+    "title": "Start saving money on your next trip",
+    "description": "Download free now—no account, no credit card, just instant currency conversion. Join smart travelers who never overpay abroad.",
+    "instantSetup": "Instant setup",
+    "private": "100% private",
+    "noAds": "No ads interrupting"
+  },
+  "footer": {
+    "support": "Support",
+    "privacy": "Privacy Policy",
+    "copyright": "© {{year}} CurrenSee. All rights reserved."
+  },
+  "getUpdates": {
+    "badge": "Product Updates",
+    "title": "Be the first to know",
+    "description": "Get notified when we launch new features, improvements, and updates. We'll only email you when there's something worth sharing.",
+    "emailPlaceholder": "Enter your email address",
+    "buttonText": "Get Updates",
+    "noSpam": "No spam, ever",
+    "private": "100% private",
+    "unsubscribe": "Unsubscribe anytime",
+    "setupRequired": "Setup Required",
+    "setupMessage": "To enable email collection, add your Web3Forms key or Formspree ID to this component.",
+    "setupLink": "Get your Web3Forms key at"
+  },
+  "emailSignup": {
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "subscribed": "Subscribed!",
+    "successMessage": "You're all set! We'll notify you about updates.",
+    "errorInvalidEmail": "Please enter a valid email address",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "floatingCTA": {
+    "title": "Download CurrenSee Free",
+    "subtitle": "Never overpay abroad again",
+    "dismiss": "Dismiss"
+  },
+  "support": {
+    "badge": "We're Here to Help",
+    "title": "Support & Feedback",
+    "description": "Need help with the app or have feedback to share? Choose the option that best fits your needs.",
+    "supportTab": "Support",
+    "feedbackTab": "Feedback",
+    "getSupport": {
+      "title": "Get Support",
+      "description": "Experiencing an issue or have a question? Fill out the form below and we'll help you out."
+    },
+    "shareFeedback": {
+      "title": "Share Your Feedback",
+      "description": "Have ideas, suggestions, or want to report a bug? We'd love to hear from you!"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "What do you need help with? *",
+    "supportTypePlaceholder": "Select support type",
+    "supportTypes": {
+      "technical": "Technical Issue",
+      "question": "General Question",
+      "bug": "Bug Report",
+      "other": "Other"
+    },
+    "emailLabel": "Your email *",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "We need your email to respond to your support request.",
+    "messageLabel": "Describe your issue or question *",
+    "messagePlaceholder": "Please provide as much detail as possible about your issue or question...",
+    "submit": "Submit Support Request",
+    "submitting": "Submitting...",
+    "successTitle": "Support request submitted!",
+    "successDescription": "We've received your request and will get back to you soon.",
+    "errorTitle": "Error",
+    "errorDescription": "Failed to submit support request. Please try again later.",
+    "messageRequired": "Message required",
+    "messageRequiredDesc": "Please enter your support request message.",
+    "emailRequired": "Email required",
+    "emailRequiredDesc": "Please enter your email so we can respond to your support request.",
+    "devMode": "Development Mode",
+    "devModeDesc": "To enable support request collection, add your Web3Forms key or Formspree ID to this component.",
+    "responseTime": "We typically respond within 24 hours",
+    "checkFAQ": "Check FAQ for common questions"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "What type of feedback is this?",
+    "feedbackTypePlaceholder": "Select feedback type",
+    "feedbackTypes": {
+      "feature": "Feature Request",
+      "bug": "Bug Report",
+      "feedback": "General Feedback",
+      "other": "Other"
+    },
+    "messageLabel": "Your feedback *",
+    "messagePlaceholder": "Tell us what you think, what features you'd like, or any issues you've encountered...",
+    "emailLabel": "Email (optional)",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "We'll only use this to follow up if needed. Your email won't be shared.",
+    "submit": "Submit Feedback",
+    "submitting": "Submitting...",
+    "successTitle": "Thank you!",
+    "successDescription": "Your feedback has been received. We appreciate your input!",
+    "errorTitle": "Error",
+    "errorDescription": "Failed to submit feedback. Please try again later.",
+    "messageRequired": "Message required",
+    "messageRequiredDesc": "Please enter your feedback message.",
+    "devMode": "Development Mode",
+    "devModeDesc": "To enable feedback collection, add your Web3Forms key or Formspree ID to this component.",
+    "readEverySubmission": "We read every submission",
+    "inputShapesApp": "Your input shapes the app",
+    "featureRequestsWelcome": "Feature requests welcome"
+  },
+  "developerFeedback": {
+    "badge": "Help Us Improve",
+    "title": "Share your feedback",
+    "description": "We're actively developing CurrenSee and your feedback helps us build a better app. Share your ideas, report bugs, or tell us what you'd like to see next."
+  },
+  "language": {
+    "select": "Select Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "french": "French",
+    "german": "German",
+    "italian": "Italian",
+    "japanese": "Japanese",
+    "chinese": "Chinese",
+    "portuguese": "Portuguese",
+    "russian": "Russian",
+    "arabic": "Arabic",
+    "korean": "Korean",
+    "romanian": "Romanian"
+  }
+}

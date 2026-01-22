@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { MessageSquare, Bug, Lightbulb, Heart } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -19,14 +20,15 @@ interface FeedbackFormProps {
   formspreeId?: string;
 }
 
-const feedbackTypes = [
-  { value: "feature", label: "Feature Request", icon: Lightbulb },
-  { value: "bug", label: "Bug Report", icon: Bug },
-  { value: "feedback", label: "General Feedback", icon: MessageSquare },
-  { value: "other", label: "Other", icon: Heart },
-];
-
 const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
+  const { t } = useTranslation();
+  
+  const feedbackTypes = [
+    { value: "feature", label: t('feedbackForm.feedbackTypes.feature'), icon: Lightbulb },
+    { value: "bug", label: t('feedbackForm.feedbackTypes.bug'), icon: Bug },
+    { value: "feedback", label: t('feedbackForm.feedbackTypes.feedback'), icon: MessageSquare },
+    { value: "other", label: t('feedbackForm.feedbackTypes.other'), icon: Heart },
+  ];
   const [feedbackType, setFeedbackType] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -38,8 +40,8 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
     
     if (!message.trim()) {
       toast({
-        title: "Message required",
-        description: "Please enter your feedback message.",
+        title: t('feedbackForm.messageRequired'),
+        description: t('feedbackForm.messageRequiredDesc'),
         variant: "destructive",
       });
       return;
@@ -81,8 +83,8 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
         if (response.ok && (result.success !== false)) {
           analytics.trackFeedbackSubmit(feedbackType || "general");
           toast({
-            title: "Thank you!",
-            description: "Your feedback has been received. We appreciate your input!",
+            title: t('feedbackForm.successTitle'),
+            description: t('feedbackForm.successDescription'),
           });
           setMessage("");
           setEmail("");
@@ -102,8 +104,8 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
         if (response.ok) {
           analytics.trackFeedbackSubmit(feedbackType || "general");
           toast({
-            title: "Thank you!",
-            description: "Your feedback has been received. We appreciate your input!",
+            title: t('feedbackForm.successTitle'),
+            description: t('feedbackForm.successDescription'),
           });
           setMessage("");
           setEmail("");
@@ -115,8 +117,8 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
         // Fallback: just show success (for development)
         analytics.trackFeedbackSubmit(feedbackType || "general");
         toast({
-          title: "Thank you!",
-          description: "Your feedback has been received. (Note: Form submission not configured)",
+          title: t('feedbackForm.successTitle'),
+          description: t('feedbackForm.successDescription'),
         });
         setMessage("");
         setEmail("");
@@ -124,8 +126,8 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to submit feedback. Please try again later.",
+        title: t('feedbackForm.errorTitle'),
+        description: t('feedbackForm.errorDescription'),
         variant: "destructive",
       });
     } finally {
@@ -143,10 +145,10 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Feedback Type */}
         <div className="space-y-2">
-          <Label htmlFor="feedback-type">What type of feedback is this?</Label>
+          <Label htmlFor="feedback-type">{t('feedbackForm.feedbackTypeLabel')}</Label>
           <Select value={feedbackType} onValueChange={setFeedbackType}>
             <SelectTrigger id="feedback-type">
-              <SelectValue placeholder="Select feedback type" />
+              <SelectValue placeholder={t('feedbackForm.feedbackTypePlaceholder')} />
             </SelectTrigger>
             <SelectContent>
               {feedbackTypes.map((type) => (
@@ -163,10 +165,10 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
 
         {/* Message */}
         <div className="space-y-2">
-          <Label htmlFor="message">Your feedback *</Label>
+          <Label htmlFor="message">{t('feedbackForm.messageLabel')}</Label>
           <Textarea
             id="message"
-            placeholder="Tell us what you think, what features you'd like, or any issues you've encountered..."
+            placeholder={t('feedbackForm.messagePlaceholder')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
@@ -177,17 +179,17 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
 
         {/* Email (optional) */}
         <div className="space-y-2">
-          <Label htmlFor="email">Email (optional)</Label>
+          <Label htmlFor="email">{t('feedbackForm.emailLabel')}</Label>
           <input
             id="email"
             type="email"
-            placeholder="your@email.com"
+            placeholder={t('feedbackForm.emailPlaceholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           />
           <p className="text-xs text-muted-foreground">
-            We'll only use this to follow up if needed. Your email won't be shared.
+            {t('feedbackForm.emailHelp')}
           </p>
         </div>
 
@@ -198,14 +200,14 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
           size="lg"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Submitting..." : "Submit Feedback"}
+          {isSubmitting ? t('feedbackForm.submitting') : t('feedbackForm.submit')}
         </Button>
 
         {!web3formsKey && !formspreeId && (
           <div className="bg-muted/50 border border-border rounded-lg p-4 text-sm text-muted-foreground">
-            <p className="font-semibold mb-2">Development Mode</p>
+            <p className="font-semibold mb-2">{t('feedbackForm.devMode')}</p>
             <p>
-              To enable feedback collection, add your Web3Forms key or Formspree ID to this component.
+              {t('feedbackForm.devModeDesc')}
             </p>
           </div>
         )}
@@ -221,15 +223,15 @@ const FeedbackForm = ({ web3formsKey, formspreeId }: FeedbackFormProps) => {
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <MessageSquare className="w-4 h-4 text-primary" />
-            <span>We read every submission</span>
+            <span>{t('feedbackForm.readEverySubmission')}</span>
           </div>
           <div className="flex items-center gap-2">
             <Heart className="w-4 h-4 text-primary" />
-            <span>Your input shapes the app</span>
+            <span>{t('feedbackForm.inputShapesApp')}</span>
           </div>
           <div className="flex items-center gap-2">
             <Lightbulb className="w-4 h-4 text-primary" />
-            <span>Feature requests welcome</span>
+            <span>{t('feedbackForm.featureRequestsWelcome')}</span>
           </div>
         </div>
       </motion.div>

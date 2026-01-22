@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SupportForm from "@/components/SupportForm";
@@ -12,6 +13,8 @@ interface SupportProps {
 }
 
 const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formspreeId }: SupportProps) => {
+  const { t } = useTranslation();
+  
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -37,14 +40,14 @@ const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formsp
                 transition={{ duration: 0.5 }}
               >
                 <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                  We're Here to Help
+                  {t('support.badge')}
                 </span>
               </motion.div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Support & Feedback
+                {t('support.title')}
               </h1>
               <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
-                Need help with the app or have feedback to share? Choose the option that best fits your needs.
+                {t('support.description')}
               </p>
             </motion.div>
 
@@ -55,14 +58,14 @@ const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formsp
                   className="flex items-center gap-2 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/10 data-[state=active]:via-primary/5 data-[state=active]:to-primary/10 data-[state=active]:text-foreground"
                 >
                   <HelpCircle className="w-4 h-4" />
-                  <span>Support</span>
+                  <span>{t('support.supportTab')}</span>
                 </TabsTrigger>
                 <TabsTrigger 
                   value="feedback" 
                   className="flex items-center gap-2 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/10 data-[state=active]:via-primary/5 data-[state=active]:to-primary/10 data-[state=active]:text-foreground"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Feedback</span>
+                  <span>{t('support.feedbackTab')}</span>
                 </TabsTrigger>
               </TabsList>
 
@@ -74,10 +77,10 @@ const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formsp
                 >
                   <div className="mb-8 text-center">
                     <h2 className="text-2xl font-bold text-foreground mb-2">
-                      Get Support
+                      {t('support.getSupport.title')}
                     </h2>
                     <p className="text-muted-foreground">
-                      Experiencing an issue or have a question? Fill out the form below and we'll help you out.
+                      {t('support.getSupport.description')}
                     </p>
                   </div>
                   <SupportForm web3formsKey={web3formsKey} formspreeId={formspreeId} />
@@ -92,10 +95,10 @@ const Support = ({ web3formsKey = "e53984f2-18c4-4e52-98f8-9f8a26a14292", formsp
                 >
                   <div className="mb-8 text-center">
                     <h2 className="text-2xl font-bold text-foreground mb-2">
-                      Share Your Feedback
+                      {t('support.shareFeedback.title')}
                     </h2>
                     <p className="text-muted-foreground">
-                      Have ideas, suggestions, or want to report a bug? We'd love to hear from you!
+                      {t('support.shareFeedback.description')}
                     </p>
                   </div>
                   <FeedbackForm web3formsKey={web3formsKey} formspreeId={formspreeId} />

@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "Funcții",
+    "pricing": "Prețuri",
+    "faq": "Întrebări"
+  },
+  "hero": {
+    "badge": "De încredere pentru călători din întreaga lume",
+    "title": "Nu mai plătiți prea mult în străinătate.",
+    "titleHighlight": "Scanează. Convertește. Economisește.",
+    "description": "Oprește-te din a face calcule mentale în străinătate. Îndreaptă camera către orice etichetă de preț, meniu sau bon și obține conversii valutare instantanee. Fără tastare, fără confuzie—doar prețuri precise în moneda ta.",
+    "freeToDownload": "Gratuit de descărcat",
+    "private": "100% privat",
+    "noAccount": "Nu este necesar cont"
+  },
+  "trustBadges": {
+    "private": "100% Privat",
+    "currencies": "150+ Valute",
+    "noAccount": "Nu Este Necesar Cont",
+    "instant": "Conversie Instantanee"
+  },
+  "features": {
+    "badge": "Funcții Puternice",
+    "title": "Tot ce ai nevoie pentru a cumpăra cu încredere în străinătate",
+    "description": "Funcții puternice concepute pentru a face călătoriile internaționale fără stres și prietenoase cu bugetul.",
+    "scan": {
+      "title": "Scanează în Secunde",
+      "description": "Îndreaptă, scanează, gata. Fără tastare, fără introducere manuală. Obține conversii valutare instantanee de la orice etichetă de preț, meniu sau bon în mai puțin de 2 secunde."
+    },
+    "private": {
+      "title": "100% Privat și Securizat",
+      "description": "Fotografiile tale nu părăsesc niciodată dispozitivul tău. Toată procesarea se întâmplă local pe telefonul tău—fără cloud, fără servere, fără colectare de date."
+    },
+    "translation": {
+      "title": "Traducere Inteligentă",
+      "description": "Nu doar conversie valutară—traduce și etichetele de preț și descrierile. Înțelege exact ce cumperi, în orice limbă."
+    },
+    "save": {
+      "title": "Salvează și Compară",
+      "description": "Salvează prețurile în timp ce faci cumpărături pentru a le compara mai târziu. Perfect pentru a găsi cele mai bune oferte în diferite magazine sau pentru a-ți planifica bugetul de călătorie."
+    },
+    "share": {
+      "title": "Distribuie Instantaneu",
+      "description": "Distribuie prețurile convertite cu companioni de călătorie instantaneu. Excelent pentru împărțirea facturilor, cumpărăturile în grup sau pentru a le arăta prietenilor acasă."
+    },
+    "widgets": {
+      "title": "Widget-uri și Acces Rapid",
+      "description": "Verifică ratele de schimb fără să deschizi aplicația. Widget-urile de pe ecranul principal și de blocare te țin informat dintr-o privire."
+    }
+  },
+  "testimonials": {
+    "badge": "Încredere și Securitate",
+    "title": "Construit pentru călători, de către călători",
+    "description": "Tot ce ai nevoie pentru a cumpăra cu încredere și a economisi bani în străinătate",
+    "private": {
+      "title": "100% Privat",
+      "description": "Toată procesarea se întâmplă pe dispozitivul tău. Fotografiile tale nu părăsesc niciodată telefonul."
+    },
+    "fast": {
+      "title": "Fulger de Rapid",
+      "description": "Obține conversii instantanee în mai puțin de 2 secunde. Fără așteptare, fără întârzieri."
+    },
+    "currencies": {
+      "title": "150+ Valute",
+      "description": "Funcționează cu toate valutele majore din întreaga lume. Convertește oriunde călătorești."
+    },
+    "noAccount": {
+      "title": "Nu Este Necesar Cont",
+      "description": "Începe să folosești imediat. Fără înregistrare, fără email, fără colectare de date personale."
+    },
+    "metrics": {
+      "private": "Privat și Securizat",
+      "currencies": "Valute",
+      "forever": "Pentru Totdeauna",
+      "accountRequired": "Cont Necesar"
+    }
+  },
+  "pricing": {
+    "badge": "Prețuri Simple",
+    "title": "Gratuit pentru totdeauna. Funcții premium în curând.",
+    "description": "Obține toate funcțiile esențiale gratuit. Premium deblochează o experiență fără reclame și îmbunătățiri alimentate de IA.",
+    "free": {
+      "title": "Gratuit",
+      "price": "0 lei",
+      "subtitle": "Cu reclame — hei, e gratuit!",
+      "features": {
+        "scanning": "Scanare instantanee a prețurilor",
+        "share": "Distribuie și salvează prețuri",
+        "translation": "Traducere etichete",
+        "widgets": "Widget-uri pe ecranul principal"
+      }
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "În curând",
+      "subtitle": "Fără reclame cu funcții alimentate de IA",
+      "features": {
+        "everything": "Tot ce este în Gratuit",
+        "noAds": "Fără reclame, niciodată",
+        "ai": "Îmbunătățiri alimentate de IA",
+        "more": "Mai multe funcții în curând..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "Ai Întrebări?",
+    "title": "Întrebări frecvente",
+    "description": "Tot ce trebuie să știi despre CurrenSee",
+    "items": {
+      "scanning": {
+        "question": "Cum funcționează scanarea prețurilor?",
+        "answer": "Pur și simplu îndreaptă camera către orice etichetă de preț, meniu sau bon. Aplicația noastră folosește OCR avansat (Recunoaștere Optică a Caracterelor) pentru a detecta prețurile și le convertește instantaneu în moneda ta preferată folosind rate de schimb în timp real."
+      },
+      "internet": {
+        "question": "Am nevoie de o conexiune la internet?",
+        "answer": "Aplicația funcționează cel mai bine cu o conexiune la internet pentru rate de schimb în timp real. Cu toate acestea, poți salva ratele de schimb pentru utilizare offline, iar funcțiile de bază de scanare funcționează offline odată ce aplicația este încărcată."
+      },
+      "privacy": {
+        "question": "Datele mele sunt private și sigure?",
+        "answer": "Absolut! Toată procesarea imaginilor se întâmplă direct pe dispozitivul tău. Nu trimitem niciodată fotografiile sau datele scanate către serverele noastre. Confidențialitatea ta este prioritatea noastră principală—100% din procesare se face local pe telefonul tău."
+      },
+      "currencies": {
+        "question": "Ce valute sunt suportate?",
+        "answer": "CurrenSee suportă peste 150 de valute din întreaga lume, inclusiv toate valutele majore precum USD, EUR, GBP, JPY, CNY și multe altele. Poți converti între orice valute suportate."
+      },
+      "free": {
+        "question": "Aplicația este cu adevărat gratuită?",
+        "answer": "Da! Aplicația este complet gratuită de descărcat și de folosit. Versiunea gratuită include toate funcțiile de bază: scanarea prețurilor, conversia valutară, traducerea etichetelor și salvarea prețurilor. Există reclame opționale, dar nu interferează cu funcționalitatea de bază."
+      },
+      "account": {
+        "question": "Pot să o folosesc fără să creez un cont?",
+        "answer": "Da! CurrenSee funcționează complet fără a necesita un cont. Doar descarcă, deschide și începe să scanezi. Fără înregistrare, fără email, fără bătăi de cap."
+      },
+      "rates": {
+        "question": "Cât de precise sunt ratele de schimb?",
+        "answer": "Folosim rate de schimb în timp real de la furnizori de date financiare de încredere. Ratele sunt actualizate frecvent pe parcursul zilei pentru a asigura acuratețea. Reține că ratele de conversie efective pot varia ușor când faci cumpărături, deoarece băncile și procesatorii de plăți pot aplica propriile comisioane."
+      },
+      "countries": {
+        "question": "Funcționează în toate țările?",
+        "answer": "Da! CurrenSee funcționează oriunde în lume. Atât timp cât poți vedea o etichetă de preț, meniu sau bon, poți să-l scanezi și să-l convertești. Aplicația suportă prețuri în orice limbă și format."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Gata să Începi?",
+    "title": "Începe să economisești bani la următoarea ta călătorie",
+    "description": "Descarcă gratuit acum—fără cont, fără card de credit, doar conversie valutară instantanee. Alătură-te călătorilor inteligenți care nu plătesc niciodată prea mult în străinătate.",
+    "instantSetup": "Configurare instantanee",
+    "private": "100% privat",
+    "noAds": "Fără reclame care întrerup"
+  },
+  "footer": {
+    "support": "Suport",
+    "privacy": "Politica de Confidențialitate",
+    "copyright": "© {{year}} CurrenSee. Toate drepturile rezervate."
+  },
+  "getUpdates": {
+    "badge": "Actualizări Produs",
+    "title": "Fii primul care află",
+    "description": "Primește notificări când lansăm funcții noi, îmbunătățiri și actualizări. Îți vom trimite email doar când există ceva care merită împărtășit.",
+    "emailPlaceholder": "Introdu adresa ta de email",
+    "buttonText": "Primește Actualizări",
+    "noSpam": "Fără spam, niciodată",
+    "private": "100% privat",
+    "unsubscribe": "Dezabonează-te oricând",
+    "setupRequired": "Configurare Necesară",
+    "setupMessage": "Pentru a activa colectarea de email-uri, adaugă cheia ta Web3Forms sau ID-ul Formspree la acest component.",
+    "setupLink": "Obține cheia ta Web3Forms la"
+  },
+  "emailSignup": {
+    "placeholder": "Introdu emailul tău",
+    "subscribe": "Abonează-te",
+    "subscribed": "Abonat!",
+    "successMessage": "Totul este gata! Te vom notifica despre actualizări.",
+    "errorInvalidEmail": "Te rugăm să introduci o adresă de email validă",
+    "errorGeneric": "Ceva a mers greșit. Te rugăm să încerci din nou."
+  },
+  "floatingCTA": {
+    "title": "Descarcă CurrenSee Gratis",
+    "subtitle": "Nu mai plătiți prea mult în străinătate",
+    "dismiss": "Închide"
+  },
+  "support": {
+    "badge": "Suntem Aici să Te Ajutăm",
+    "title": "Suport și Feedback",
+    "description": "Ai nevoie de ajutor cu aplicația sau ai feedback de împărtășit? Alege opțiunea care se potrivește cel mai bine nevoilor tale.",
+    "supportTab": "Suport",
+    "feedbackTab": "Feedback",
+    "getSupport": {
+      "title": "Obține Suport",
+      "description": "Ai o problemă sau o întrebare? Completează formularul de mai jos și te vom ajuta."
+    },
+    "shareFeedback": {
+      "title": "Distribuie Feedback-ul Tău",
+      "description": "Ai idei, sugestii sau vrei să raportezi un bug? Ne-ar plăcea să te auzim!"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "Cu ce ai nevoie de ajutor? *",
+    "supportTypePlaceholder": "Selectează tipul de suport",
+    "supportTypes": {
+      "technical": "Problema Tehnică",
+      "question": "Întrebare Generală",
+      "bug": "Raportare Bug",
+      "other": "Altceva"
+    },
+    "emailLabel": "Emailul tău *",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "Avem nevoie de emailul tău pentru a răspunde la cererea ta de suport.",
+    "messageLabel": "Descrie problema sau întrebarea ta *",
+    "messagePlaceholder": "Te rugăm să furnizezi cât mai multe detalii despre problema sau întrebarea ta...",
+    "submit": "Trimite Cerere de Suport",
+    "submitting": "Se trimite...",
+    "successTitle": "Cererea de suport a fost trimisă!",
+    "successDescription": "Am primit cererea ta și îți vom răspunde în curând.",
+    "errorTitle": "Eroare",
+    "errorDescription": "Trimiterea cererii de suport a eșuat. Te rugăm să încerci din nou mai târziu.",
+    "messageRequired": "Mesajul este necesar",
+    "messageRequiredDesc": "Te rugăm să introduci mesajul cererii tale de suport.",
+    "emailRequired": "Emailul este necesar",
+    "emailRequiredDesc": "Te rugăm să introduci emailul tău astfel încât să putem răspunde la cererea ta de suport.",
+    "devMode": "Mod Dezvoltare",
+    "devModeDesc": "Pentru a activa colectarea cererilor de suport, adaugă cheia ta Web3Forms sau ID-ul Formspree la acest component.",
+    "responseTime": "Răspundem de obicei în 24 de ore",
+    "checkFAQ": "Verifică FAQ pentru întrebări frecvente"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "Ce tip de feedback este acesta?",
+    "feedbackTypePlaceholder": "Selectează tipul de feedback",
+    "feedbackTypes": {
+      "feature": "Cerere Funcție",
+      "bug": "Raportare Bug",
+      "feedback": "Feedback General",
+      "other": "Altceva"
+    },
+    "messageLabel": "Feedback-ul tău *",
+    "messagePlaceholder": "Spune-ne ce crezi, ce funcții ai vrea sau orice probleme pe care le-ai întâmpinat...",
+    "emailLabel": "Email (opțional)",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "Vom folosi acest lucru doar pentru urmărire dacă este necesar. Emailul tău nu va fi distribuit.",
+    "submit": "Trimite Feedback",
+    "submitting": "Se trimite...",
+    "successTitle": "Mulțumim!",
+    "successDescription": "Feedback-ul tău a fost primit. Apreciem contribuția ta!",
+    "errorTitle": "Eroare",
+    "errorDescription": "Trimiterea feedback-ului a eșuat. Te rugăm să încerci din nou mai târziu.",
+    "messageRequired": "Mesajul este necesar",
+    "messageRequiredDesc": "Te rugăm să introduci mesajul tău de feedback.",
+    "devMode": "Mod Dezvoltare",
+    "devModeDesc": "Pentru a activa colectarea de feedback, adaugă cheia ta Web3Forms sau ID-ul Formspree la acest component.",
+    "readEverySubmission": "Citim fiecare trimitere",
+    "inputShapesApp": "Contribuția ta modelează aplicația",
+    "featureRequestsWelcome": "Cererile de funcții sunt binevenite"
+  },
+  "developerFeedback": {
+    "badge": "Ajută-ne să Ne Îmbunătățim",
+    "title": "Distribuie feedback-ul tău",
+    "description": "Dezvoltăm activ CurrenSee și feedback-ul tău ne ajută să construim o aplicație mai bună. Distribuie ideile tale, raportează bug-uri sau spune-ne ce ai vrea să vezi în continuare."
+  },
+  "language": {
+    "select": "Selectează Limba",
+    "english": "Engleză",
+    "spanish": "Spaniolă",
+    "french": "Franceză",
+    "german": "Germană",
+    "italian": "Italiană",
+    "japanese": "Japoneză",
+    "chinese": "Chineză",
+    "portuguese": "Portugheză",
+    "russian": "Rusă",
+    "arabic": "Arabă",
+    "korean": "Coreeană",
+    "romanian": "Română"
+  }
+}

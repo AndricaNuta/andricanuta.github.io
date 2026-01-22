@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import currenseeLogo from "@/assets/currensee-logo.png";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Menu, X } from "lucide-react";
 import AppStoreBadge from "./AppStoreBadge";
 import { analytics } from "@/lib/analytics";
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -112,7 +115,7 @@ const Navigation = () => {
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              Features
+              {t('nav.features')}
             </button>
             <button
               onClick={() => {
@@ -125,7 +128,7 @@ const Navigation = () => {
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              Pricing
+              {t('nav.pricing')}
             </button>
             <button
               onClick={() => {
@@ -138,9 +141,10 @@ const Navigation = () => {
               }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              FAQ
+              {t('nav.faq')}
             </button>
             <div className="h-6 w-px bg-border" />
+            <LanguageSwitcher />
             <ThemeToggle />
             <AppStoreBadge
               href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
@@ -151,6 +155,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-4 md:hidden">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -188,7 +193,7 @@ const Navigation = () => {
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
-                Features
+                {t('nav.features')}
               </button>
               <button
                 onClick={() => {
@@ -201,7 +206,7 @@ const Navigation = () => {
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
-                Pricing
+                {t('nav.pricing')}
               </button>
               <button
                 onClick={() => {
@@ -214,7 +219,7 @@ const Navigation = () => {
                 }}
                 className="block w-full text-left text-base font-medium text-foreground py-2"
               >
-                FAQ
+                {t('nav.faq')}
               </button>
               <div className="pt-4 border-t border-border">
                 <AppStoreBadge

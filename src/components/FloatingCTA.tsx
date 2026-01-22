@@ -1,12 +1,30 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import AppStoreBadge from "./AppStoreBadge";
 import { X } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
 const FloatingCTA = () => {
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const [language, setLanguage] = useState(i18n.language);
+
+  // Update when language changes
+  useEffect(() => {
+    // Set initial language
+    setLanguage(i18n.language);
+    
+    const handleLanguageChanged = (lng: string) => {
+      setLanguage(lng);
+    };
+    
+    i18n.on('languageChanged', handleLanguageChanged);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChanged);
+    };
+  }, [i18n]);
 
   const handleDismiss = useCallback((e: React.MouseEvent | React.PointerEvent | React.TouchEvent) => {
     e.preventDefault();
@@ -30,7 +48,7 @@ const FloatingCTA = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isDismissed, isVisible]);
+  }, [isDismissed, isVisible, i18n.language]);
 
   if (isDismissed) return null;
 
@@ -38,6 +56,7 @@ const FloatingCTA = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
+          key={language}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
@@ -47,10 +66,10 @@ const FloatingCTA = () => {
           <div className="relative bg-card border border-border rounded-2xl shadow-2xl p-3 mx-4 max-w-sm">
             <div className="pr-8">
               <p className="text-sm font-semibold text-foreground mb-1.5">
-                Download CurrenSee Free
+                {t('floatingCTA.title')}
               </p>
               <p className="text-xs text-muted-foreground mb-2.5">
-                Never overpay abroad again
+                {t('floatingCTA.subtitle')}
               </p>
               <AppStoreBadge 
                 href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
@@ -66,7 +85,7 @@ const FloatingCTA = () => {
               onPointerDown={handleDismiss}
               onTouchStart={handleDismiss}
               className="absolute top-1 right-1 p-2 rounded-full hover:bg-muted active:bg-muted/80 transition-colors cursor-pointer touch-manipulation"
-              aria-label="Dismiss"
+              aria-label={t('floatingCTA.dismiss')}
               style={{ zIndex: 1000 }}
             >
               <X className="w-4 h-4 text-muted-foreground pointer-events-none" />

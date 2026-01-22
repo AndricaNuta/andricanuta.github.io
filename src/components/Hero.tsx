@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import PhoneMockup from "./PhoneMockup";
 import AppStoreBadge from "./AppStoreBadge";
 import appScreenshot from "@/assets/app-screenshot-scan.png";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle pt-20">
       {/* Enhanced Background decoration - Optimized for Safari */}
@@ -38,11 +40,11 @@ const Hero = () => {
               style={{ willChange: 'transform, opacity' }}
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-medium text-primary">Trusted by travelers worldwide</span>
+              <span className="text-sm font-medium text-primary">{t('hero.badge')}</span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
-              Never overpay abroad again.
+              {t('hero.title')}
               <br />
               <span 
                 className="text-gradient bg-clip-text text-transparent"
@@ -52,12 +54,12 @@ const Hero = () => {
                   animation: "gradient 3s ease infinite",
                 }}
               >
-                Scan. Convert. Save.
+                {t('hero.titleHighlight')}
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-normal md:font-normal">
-              Stop doing mental math abroad. Point your camera at any price tag, menu, or receipt and get instant currency conversions. No typing, no confusion—just accurate prices in your currency.
+              {t('hero.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
@@ -76,7 +78,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="font-medium">Free to download</span>
+                <span className="font-medium">{t('hero.freeToDownload')}</span>
               </motion.div>
               <motion.div
                 className="flex items-center gap-2.5"
@@ -89,7 +91,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <span className="font-medium">100% private</span>
+                <span className="font-medium">{t('hero.private')}</span>
               </motion.div>
               <motion.div
                 className="flex items-center gap-2.5"
@@ -102,7 +104,7 @@ const Hero = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span className="font-medium">No account needed</span>
+                <span className="font-medium">{t('hero.noAccount')}</span>
               </motion.div>
             </div>
           </motion.div>

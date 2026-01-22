@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Sparkles, Zap } from "lucide-react";
 import { ShineBorder } from "./magicui/shine-border";
 import { analytics } from "@/lib/analytics";
 import { useEffect, useRef } from "react";
 
 const Pricing = () => {
+  const { t } = useTranslation();
   const hasTrackedView = useRef(false);
 
   useEffect(() => {
@@ -57,14 +59,14 @@ const Pricing = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Simple Pricing
+              {t('pricing.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Free forever. Premium features coming soon.
+            {t('pricing.title')}
           </h2>
           <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
-            Get all essential features free. Premium unlocks ad-free experience and AI-powered enhancements.
+            {t('pricing.description')}
           </p>
         </motion.div>
 
@@ -79,28 +81,28 @@ const Pricing = () => {
           >
             <div className="flex items-center gap-2 mb-4">
               <Zap className="w-5 h-5 text-primary" />
-              <h3 className="text-xl font-semibold text-foreground">Free</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t('pricing.free.title')}</h3>
             </div>
-            <p className="text-3xl font-bold text-foreground mb-2">$0</p>
+            <p className="text-3xl font-bold text-foreground mb-2">{t('pricing.free.price')}</p>
             <p className="text-muted-foreground text-sm mb-6">
-              Ad-supported — hey, it's free!
+              {t('pricing.free.subtitle')}
             </p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Instant price scanning
+                {t('pricing.free.features.scanning')}
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Share & save prices
+                {t('pricing.free.features.share')}
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Label translation
+                {t('pricing.free.features.translation')}
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Home screen widgets
+                {t('pricing.free.features.widgets')}
               </li>
             </ul>
           </motion.div>
@@ -123,28 +125,28 @@ const Pricing = () => {
                 <div className="relative">
                   <div className="flex items-center gap-2 mb-4">
                     <Sparkles className="w-5 h-5" />
-                    <h3 className="text-xl font-semibold">Premium</h3>
+                    <h3 className="text-xl font-semibold">{t('pricing.premium.title')}</h3>
                   </div>
-                  <p className="text-3xl font-bold mb-2">Coming soon</p>
+                  <p className="text-3xl font-bold mb-2">{t('pricing.premium.price')}</p>
                   <p className="text-white/70 text-sm mb-6">
-                    Ad-free with AI-powered features
+                    {t('pricing.premium.subtitle')}
                   </p>
                   <ul className="space-y-3 text-sm text-white/80">
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                      Everything in Free
+                      {t('pricing.premium.features.everything')}
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                      No ads, ever
+                      {t('pricing.premium.features.noAds')}
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                      AI-powered improvements
+                      {t('pricing.premium.features.ai')}
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                      More features on the way...
+                      {t('pricing.premium.features.more')}
                     </li>
                   </ul>
                 </div>

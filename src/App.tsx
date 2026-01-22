@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { ThemeProvider as CustomThemeProvider } from "@/contexts/ThemeContext";
 import { useThemeStyles } from "@/hooks/use-theme-styles";
+import { useI18nLang } from "@/hooks/use-i18n-lang";
 import { useEffect } from "react";
 import { trackPageView, setupScrollTracking } from "@/lib/analytics";
 import Index from "./pages/Index";
@@ -18,6 +19,12 @@ const queryClient = new QueryClient();
 // Component to apply theme styles
 const ThemeStyles = () => {
   useThemeStyles();
+  return null;
+};
+
+// Component to update HTML lang attribute
+const I18nLang = () => {
+  useI18nLang();
   return null;
 };
 
@@ -49,6 +56,7 @@ const App = () => (
   >
     <CustomThemeProvider>
       <ThemeStyles />
+      <I18nLang />
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
@@ -69,22 +70,28 @@ const EmailSignup = ({
   emailjsTemplateId,
   emailjsPublicKey,
   onSubmit,
-  placeholder = "Enter your email",
-  buttonText = "Subscribe",
-  successMessage = "You're all set! We'll notify you about updates.",
+  placeholder,
+  buttonText,
+  successMessage,
   variant = "inline",
   className = "",
 }: EmailSignupProps) => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  
+  // Use translations as defaults if not provided
+  const finalPlaceholder = placeholder || t('emailSignup.placeholder');
+  const finalButtonText = buttonText || t('emailSignup.subscribe');
+  const finalSuccessMessage = successMessage || t('emailSignup.successMessage');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email || !email.includes("@")) {
       setStatus("error");
-      setErrorMessage("Please enter a valid email address");
+      setErrorMessage(t('emailSignup.errorInvalidEmail'));
       return;
     }
 
@@ -169,7 +176,7 @@ const EmailSignup = ({
       }, 3000);
     } catch (error) {
       setStatus("error");
-      setErrorMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");
+      setErrorMessage(error instanceof Error ? error.message : t('emailSignup.errorGeneric'));
     }
   };
 
@@ -185,7 +192,7 @@ const EmailSignup = ({
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder={placeholder}
+            placeholder={finalPlaceholder}
             disabled={status === "loading" || status === "success"}
             className="w-full rounded-xl"
             required
@@ -209,7 +216,7 @@ const EmailSignup = ({
         >
           {status === "loading" && <Loader2 className="w-4 h-4 animate-spin" />}
           {status === "success" && <CheckCircle2 className="w-4 h-4" />}
-          {status === "success" ? "Subscribed!" : buttonText}
+          {status === "success" ? t('emailSignup.subscribed') : finalButtonText}
         </Button>
       </div>
       
@@ -220,7 +227,7 @@ const EmailSignup = ({
           className="mt-3 text-sm text-success-green flex items-center gap-2"
         >
           <CheckCircle2 className="w-4 h-4" />
-          {successMessage}
+          {finalSuccessMessage}
         </motion.p>
       )}
     </form>

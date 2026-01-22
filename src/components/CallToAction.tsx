@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AppStoreBadge from "./AppStoreBadge";
 import appConverter from "@/assets/app-screenshot-converter.png";
 import appWatchlist from "@/assets/app-screenshot-watchlist.png";
 
 const CallToAction = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-16 lg:py-24 bg-background overflow-hidden relative">
       <div className="container mx-auto px-6">
@@ -38,29 +40,29 @@ const CallToAction = () => {
                 style={{ willChange: 'transform, opacity' }}
               >
                 <span className="text-sm font-semibold text-white/80 uppercase tracking-wider">
-                  Ready to Start?
+                  {t('cta.badge')}
                 </span>
               </motion.div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-                Start saving money on your next trip
+                {t('cta.title')}
               </h2>
               <p className="text-white/90 text-xl md:text-2xl mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal md:font-normal">
-                Download free now—no account, no credit card, just instant currency conversion. Join smart travelers who never overpay abroad.
+                {t('cta.description')}
               </p>
               <div className="flex flex-col gap-6 mb-8">
                 <AppStoreBadge href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro" source="cta" />
                 <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm justify-center lg:justify-start">
                   <div className="flex items-center gap-2">
                     <span>⚡</span>
-                    <span>Instant setup</span>
+                    <span>{t('cta.instantSetup')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>🔒</span>
-                    <span>100% private</span>
+                    <span>{t('cta.private')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span>✨</span>
-                    <span>No ads interrupting</span>
+                    <span>{t('cta.noAds')}</span>
                   </div>
                 </div>
               </div>

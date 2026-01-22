@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import currenseeLogo from "@/assets/currensee-logo.png";
 import { ThemeToggle } from "./ThemeToggle";
 import { Instagram, Music } from "lucide-react";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="py-16 bg-secondary/50 border-t border-border relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -29,7 +31,7 @@ const Footer = () => {
               href="/support"
               className="font-medium text-foreground/80 hover:text-foreground transition-colors"
             >
-              Support
+              {t('footer.support')}
             </a>
             <a 
               href="https://few-cephalopod-11a.notion.site/Currency-Converter-About-Privacy-Policy-Terms-27ffb972bd6380049ba2c94b28535589" 
@@ -37,7 +39,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              {t('footer.privacy')}
             </a>
             <a 
               href="https://www.instagram.com/currensee.app" 
@@ -64,7 +66,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CurrenSee. All rights reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>

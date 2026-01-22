@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
 import Marquee from "./magicui/marquee";
 import { Shield, Globe, Lock, Zap } from "lucide-react";
 
-const badges = [
-  { icon: Shield, text: "100% Private" },
-  { icon: Globe, text: "150+ Currencies" },
-  { icon: Lock, text: "No Account Needed" },
-  { icon: Zap, text: "Instant Conversion" },
-];
-
 const TrustBadges = () => {
+  const { t } = useTranslation();
+  
+  const badges = [
+    { icon: Shield, text: t('trustBadges.private') },
+    { icon: Globe, text: t('trustBadges.currencies') },
+    { icon: Lock, text: t('trustBadges.noAccount') },
+    { icon: Zap, text: t('trustBadges.instant') },
+  ];
   return (
     <section className="py-8 bg-background border-y border-border">
       <div className="container mx-auto px-6">

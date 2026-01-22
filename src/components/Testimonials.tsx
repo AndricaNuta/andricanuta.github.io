@@ -1,31 +1,33 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Shield, Zap, Globe, Lock } from "lucide-react";
 import { NumberTicker } from "./magicui/number-ticker";
 
-const trustFeatures = [
-  {
-    icon: Shield,
-    title: "100% Private",
-    description: "All processing happens on your device. Your photos never leave your phone.",
-  },
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Get instant conversions in under 2 seconds. No waiting, no delays.",
-  },
-  {
-    icon: Globe,
-    title: "150+ Currencies",
-    description: "Works with all major currencies worldwide. Convert anywhere you travel.",
-  },
-  {
-    icon: Lock,
-    title: "No Account Required",
-    description: "Start using immediately. No sign-up, no email, no personal data collected.",
-  },
-];
-
 const Testimonials = () => {
+  const { t } = useTranslation();
+  
+  const trustFeatures = [
+    {
+      icon: Shield,
+      title: t('testimonials.private.title'),
+      description: t('testimonials.private.description'),
+    },
+    {
+      icon: Zap,
+      title: t('testimonials.fast.title'),
+      description: t('testimonials.fast.description'),
+    },
+    {
+      icon: Globe,
+      title: t('testimonials.currencies.title'),
+      description: t('testimonials.currencies.description'),
+    },
+    {
+      icon: Lock,
+      title: t('testimonials.noAccount.title'),
+      description: t('testimonials.noAccount.description'),
+    },
+  ];
   return (
     <section className="pt-16 pb-12 lg:pt-24 lg:pb-16 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration - Optimized for Safari */}
@@ -52,14 +54,14 @@ const Testimonials = () => {
             style={{ willChange: 'transform, opacity' }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Trust & Security
+              {t('testimonials.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Built for travelers, by travelers
+            {t('testimonials.title')}
           </h2>
           <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
-            Everything you need to shop confidently and save money abroad
+            {t('testimonials.description')}
           </p>
         </motion.div>
 
@@ -99,23 +101,23 @@ const Testimonials = () => {
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                 <NumberTicker value={100} />%
               </div>
-              <div className="text-sm font-medium">Private & Secure</div>
+              <div className="text-sm font-medium">{t('testimonials.metrics.private')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                 <NumberTicker value={150} />+
               </div>
-              <div className="text-sm font-medium">Currencies</div>
+              <div className="text-sm font-medium">{t('testimonials.metrics.currencies')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">Free</div>
-              <div className="text-sm font-medium">Forever</div>
+              <div className="text-sm font-medium">{t('testimonials.metrics.forever')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                 <NumberTicker value={0} />
               </div>
-              <div className="text-sm font-medium">Account Required</div>
+              <div className="text-sm font-medium">{t('testimonials.metrics.accountRequired')}</div>
             </div>
           </div>
         </motion.div>

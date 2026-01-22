@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import EmailSignup from "./EmailSignup";
 
 interface GetUpdatesProps {
@@ -16,6 +17,8 @@ interface GetUpdatesProps {
 }
 
 const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
+  const { t } = useTranslation();
+  
   return (
     <section className="pt-12 lg:pt-16 pb-16 lg:pb-24 bg-gradient-subtle relative overflow-hidden">
       {/* Background decoration - Optimized for Safari */}
@@ -42,16 +45,16 @@ const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
             style={{ willChange: 'transform, opacity' }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Product Updates
+              {t('getUpdates.badge')}
             </span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Be the first to know
+            {t('getUpdates.title')}
           </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed font-normal md:font-normal max-w-xl mx-auto">
-            Get notified when we launch new features, improvements, and updates. We'll only email you when there's something worth sharing.
+            {t('getUpdates.description')}
           </p>
 
           {web3formsKey || formspreeId ? (
@@ -59,19 +62,19 @@ const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
               <EmailSignup
                 web3formsKey={web3formsKey}
                 formspreeId={formspreeId}
-                placeholder="Enter your email address"
-                buttonText="Get Updates"
+                placeholder={t('getUpdates.emailPlaceholder')}
+                buttonText={t('getUpdates.buttonText')}
                 variant="inline"
                 className="w-full max-w-md"
               />
             </div>
           ) : (
             <div className="bg-muted/50 border border-border rounded-lg p-6 text-sm text-muted-foreground">
-              <p className="font-semibold mb-2">Setup Required</p>
+              <p className="font-semibold mb-2">{t('getUpdates.setupRequired')}</p>
               <p>
-                To enable email collection, add your Web3Forms key or Formspree ID to this component.
+                {t('getUpdates.setupMessage')}
                 <br />
-                Get your Web3Forms key at <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-primary underline">web3forms.com</a>
+                {t('getUpdates.setupLink')} <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-primary underline">web3forms.com</a>
               </p>
             </div>
           )}
@@ -81,19 +84,19 @@ const GetUpdates = ({ web3formsKey, formspreeId }: GetUpdatesProps) => {
               <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span>No spam, ever</span>
+              <span>{t('getUpdates.noSpam')}</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              <span>100% private</span>
+              <span>{t('getUpdates.private')}</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-success-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              <span>Unsubscribe anytime</span>
+              <span>{t('getUpdates.unsubscribe')}</span>
             </div>
           </div>
         </motion.div>

@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "功能",
+    "pricing": "价格",
+    "faq": "常见问题"
+  },
+  "hero": {
+    "badge": "受到全球旅行者信赖",
+    "title": "再也不会在国外多付钱。",
+    "titleHighlight": "扫描。转换。节省。",
+    "description": "停止在国外心算。将相机对准任何价格标签、菜单或收据，即可获得即时货币转换。无需输入，无需困惑—只需您货币的准确价格。",
+    "freeToDownload": "免费下载",
+    "private": "100% 私密",
+    "noAccount": "无需账户"
+  },
+  "trustBadges": {
+    "private": "100% 私密",
+    "currencies": "150+ 种货币",
+    "noAccount": "无需账户",
+    "instant": "即时转换"
+  },
+  "features": {
+    "badge": "强大功能",
+    "title": "在国外自信购物所需的一切",
+    "description": "旨在使国际旅行无压力且经济实惠的强大功能。",
+    "scan": {
+      "title": "秒速扫描",
+      "description": "对准、扫描、完成。无需输入，无需手动输入。在2秒内从任何价格标签、菜单或收据获得即时货币转换。"
+    },
+    "private": {
+      "title": "100% 私密和安全",
+      "description": "您的照片永远不会离开您的设备。所有处理都在您的手机上本地进行—无云、无服务器、无数据收集。"
+    },
+    "translation": {
+      "title": "智能翻译",
+      "description": "不仅仅是货币转换—还可以翻译价格标签和描述。准确了解您购买的内容，支持任何语言。"
+    },
+    "save": {
+      "title": "保存和比较",
+      "description": "购物时保存价格以便稍后比较。非常适合在不同商店找到最佳交易或规划旅行预算。"
+    },
+    "share": {
+      "title": "即时分享",
+      "description": "立即与旅行伙伴分享转换后的价格。非常适合分摊账单、团体购物或向家乡的朋友展示。"
+    },
+    "widgets": {
+      "title": "小组件和快速访问",
+      "description": "无需打开应用即可查看汇率。主屏幕和锁定屏幕小组件让您一目了然。"
+    }
+  },
+  "testimonials": {
+    "badge": "信任与安全",
+    "title": "为旅行者打造，由旅行者打造",
+    "description": "在国外自信购物和节省金钱所需的一切",
+    "private": {
+      "title": "100% 私密",
+      "description": "所有处理都在您的设备上进行。您的照片永远不会离开您的手机。"
+    },
+    "fast": {
+      "title": "闪电般快速",
+      "description": "在2秒内获得即时转换。无需等待，无延迟。"
+    },
+    "currencies": {
+      "title": "150+ 种货币",
+      "description": "适用于全球所有主要货币。无论您在哪里旅行都可以转换。"
+    },
+    "noAccount": {
+      "title": "无需账户",
+      "description": "立即开始使用。无需注册，无需电子邮件，不收集个人数据。"
+    },
+    "metrics": {
+      "private": "私密和安全",
+      "currencies": "货币",
+      "forever": "永久",
+      "accountRequired": "需要账户"
+    }
+  },
+  "pricing": {
+    "badge": "简单定价",
+    "title": "永久免费。高级功能即将推出。",
+    "description": "免费获得所有基本功能。高级版解锁无广告体验和AI驱动的增强功能。",
+    "free": {
+      "title": "免费",
+      "price": "¥0",
+      "subtitle": "广告支持—嘿，它是免费的！",
+      "features": {
+        "scanning": "即时价格扫描",
+        "share": "分享和保存价格",
+        "translation": "标签翻译",
+        "widgets": "主屏幕小组件"
+      }
+    },
+    "premium": {
+      "title": "高级版",
+      "price": "即将推出",
+      "subtitle": "无广告，AI驱动功能",
+      "features": {
+        "everything": "免费版的所有功能",
+        "noAds": "永远无广告",
+        "ai": "AI驱动的改进",
+        "more": "更多功能即将推出..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "有问题？",
+    "title": "常见问题",
+    "description": "关于CurrenSee您需要了解的一切",
+    "items": {
+      "scanning": {
+        "question": "价格扫描如何工作？",
+        "answer": "只需将相机对准任何价格标签、菜单或收据。我们的应用使用先进的OCR（光学字符识别）来检测价格，并使用实时汇率立即将其转换为您的首选货币。"
+      },
+      "internet": {
+        "question": "我需要互联网连接吗？",
+        "answer": "应用在实时汇率方面最好使用互联网连接。但是，您可以保存汇率以供离线使用，一旦应用加载，基本扫描功能即可离线工作。"
+      },
+      "privacy": {
+        "question": "我的数据是否私密和安全？",
+        "answer": "绝对！所有图像处理都在您的设备上直接进行。我们永远不会将您的照片或扫描数据发送到我们的服务器。您的隐私是我们的首要任务—100%的处理都在您的手机上本地完成。"
+      },
+      "currencies": {
+        "question": "支持哪些货币？",
+        "answer": "CurrenSee支持全球150多种货币，包括所有主要货币，如USD、EUR、GBP、JPY、CNY等。您可以在任何支持的货币之间进行转换。"
+      },
+      "free": {
+        "question": "应用真的免费吗？",
+        "answer": "是的！应用完全免费下载和使用。免费版包括所有核心功能：价格扫描、货币转换、标签翻译和价格保存。有可选广告，但它们不会干扰核心功能。"
+      },
+      "account": {
+        "question": "我可以不创建账户就使用吗？",
+        "answer": "是的！CurrenSee完全不需要账户即可工作。只需下载、打开并开始扫描。无需注册，无需电子邮件，无需麻烦。"
+      },
+      "rates": {
+        "question": "汇率有多准确？",
+        "answer": "我们使用来自可靠金融数据提供商的实时汇率。汇率全天频繁更新以确保准确性。请注意，当您进行购买时，实际转换率可能会略有不同，因为银行和支付处理器可能会应用自己的费用。"
+      },
+      "countries": {
+        "question": "它在所有国家都有效吗？",
+        "answer": "是的！CurrenSee在世界任何地方都有效。只要您能看到价格标签、菜单或收据，就可以扫描并转换它。应用支持任何语言和格式的价格。"
+      }
+    }
+  },
+  "cta": {
+    "badge": "准备开始了吗？",
+    "title": "在您的下一次旅行中开始省钱",
+    "description": "立即免费下载—无需账户，无需信用卡，只需即时货币转换。加入永远不会在国外多付钱的聪明旅行者。",
+    "instantSetup": "即时设置",
+    "private": "100% 私密",
+    "noAds": "无中断广告"
+  },
+  "footer": {
+    "support": "支持",
+    "privacy": "隐私政策",
+    "copyright": "© {{year}} CurrenSee. 保留所有权利。"
+  },
+  "getUpdates": {
+    "badge": "产品更新",
+    "title": "第一时间了解",
+    "description": "当我们发布新功能、改进和更新时收到通知。我们只会在有值得分享的内容时向您发送电子邮件。",
+    "emailPlaceholder": "输入您的电子邮件地址",
+    "buttonText": "获取更新",
+    "noSpam": "永远无垃圾邮件",
+    "private": "100% 私密",
+    "unsubscribe": "随时取消订阅",
+    "setupRequired": "需要设置",
+    "setupMessage": "要启用电子邮件收集，请将您的Web3Forms密钥或Formspree ID添加到此组件。",
+    "setupLink": "在以下位置获取您的Web3Forms密钥："
+  },
+  "emailSignup": {
+    "placeholder": "输入您的电子邮件",
+    "subscribe": "订阅",
+    "subscribed": "已订阅！",
+    "successMessage": "一切就绪！我们会通知您更新。",
+    "errorInvalidEmail": "请输入有效的电子邮件地址",
+    "errorGeneric": "出了点问题。请重试。"
+  },
+  "floatingCTA": {
+    "title": "免费下载CurrenSee",
+    "subtitle": "再也不会在国外多付钱",
+    "dismiss": "关闭"
+  },
+  "support": {
+    "badge": "我们随时为您提供帮助",
+    "title": "支持与反馈",
+    "description": "需要应用帮助或有反馈要分享？选择最适合您需求的选项。",
+    "supportTab": "支持",
+    "feedbackTab": "反馈",
+    "getSupport": {
+      "title": "获取支持",
+      "description": "遇到问题或有疑问？填写下面的表单，我们会帮助您。"
+    },
+    "shareFeedback": {
+      "title": "分享您的反馈",
+      "description": "有想法、建议或想报告错误？我们很乐意听取您的意见！"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "您需要什么帮助？ *",
+    "supportTypePlaceholder": "选择支持类型",
+    "supportTypes": {
+      "technical": "技术问题",
+      "question": "一般问题",
+      "bug": "错误报告",
+      "other": "其他"
+    },
+    "emailLabel": "您的电子邮件 *",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "我们需要您的电子邮件来回复您的支持请求。",
+    "messageLabel": "描述您的问题或疑问 *",
+    "messagePlaceholder": "请尽可能详细地描述您的问题或疑问...",
+    "submit": "提交支持请求",
+    "submitting": "提交中...",
+    "successTitle": "支持请求已提交！",
+    "successDescription": "我们已收到您的请求，将尽快回复您。",
+    "errorTitle": "错误",
+    "errorDescription": "提交支持请求失败。请稍后重试。",
+    "messageRequired": "需要消息",
+    "messageRequiredDesc": "请输入您的支持请求消息。",
+    "emailRequired": "需要电子邮件",
+    "emailRequiredDesc": "请输入您的电子邮件，以便我们回复您的支持请求。",
+    "devMode": "开发模式",
+    "devModeDesc": "要启用支持请求收集，请将您的Web3Forms密钥或Formspree ID添加到此组件。",
+    "responseTime": "我们通常在24小时内回复",
+    "checkFAQ": "查看常见问题FAQ"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "这是什么类型的反馈？",
+    "feedbackTypePlaceholder": "选择反馈类型",
+    "feedbackTypes": {
+      "feature": "功能请求",
+      "bug": "错误报告",
+      "feedback": "一般反馈",
+      "other": "其他"
+    },
+    "messageLabel": "您的反馈 *",
+    "messagePlaceholder": "告诉我们您的想法、您想要的功能或遇到的任何问题...",
+    "emailLabel": "电子邮件（可选）",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "我们仅在需要跟进时使用此信息。您的电子邮件不会被共享。",
+    "submit": "提交反馈",
+    "submitting": "提交中...",
+    "successTitle": "谢谢！",
+    "successDescription": "您的反馈已收到。我们感谢您的意见！",
+    "errorTitle": "错误",
+    "errorDescription": "提交反馈失败。请稍后重试。",
+    "messageRequired": "需要消息",
+    "messageRequiredDesc": "请输入您的反馈消息。",
+    "devMode": "开发模式",
+    "devModeDesc": "要启用反馈收集，请将您的Web3Forms密钥或Formspree ID添加到此组件。",
+    "readEverySubmission": "我们阅读每一份提交",
+    "inputShapesApp": "您的意见塑造了应用",
+    "featureRequestsWelcome": "欢迎功能请求"
+  },
+  "developerFeedback": {
+    "badge": "帮助我们改进",
+    "title": "分享您的反馈",
+    "description": "我们正在积极开发CurrenSee，您的反馈帮助我们构建更好的应用。分享您的想法、报告错误或告诉我们您希望接下来看到什么。"
+  },
+  "language": {
+    "select": "选择语言",
+    "english": "英语",
+    "spanish": "西班牙语",
+    "french": "法语",
+    "german": "德语",
+    "italian": "意大利语",
+    "japanese": "日语",
+    "chinese": "中文",
+    "portuguese": "葡萄牙语",
+    "russian": "俄语",
+    "arabic": "阿拉伯语",
+    "korean": "韩语",
+    "romanian": "罗马尼亚语"
+  }
+}

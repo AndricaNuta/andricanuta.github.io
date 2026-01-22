@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import FeatureCard from "./FeatureCard";
 import {
   Camera,
@@ -9,40 +10,41 @@ import {
   Smartphone,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: Camera,
-    title: "Scan in Seconds",
-    description: "Point, scan, done. No typing, no manual entry. Get instant currency conversions from any price tag, menu, or receipt in under 2 seconds.",
-  },
-  {
-    icon: Shield,
-    title: "100% Private & Secure",
-    description: "Your photos never leave your device. All processing happens locally on your phone—no cloud, no servers, no data collection.",
-  },
-  {
-    icon: Languages,
-    title: "Smart Translation",
-    description: "Not just currency conversion—translate price labels and descriptions too. Understand exactly what you're buying, in any language.",
-  },
-  {
-    icon: Bookmark,
-    title: "Save & Compare",
-    description: "Save prices as you shop to compare later. Perfect for finding the best deals across different stores or planning your travel budget.",
-  },
-  {
-    icon: Share2,
-    title: "Share Instantly",
-    description: "Share converted prices with travel companions instantly. Great for splitting bills, group shopping, or showing friends back home.",
-  },
-  {
-    icon: Smartphone,
-    title: "Widgets & Quick Access",
-    description: "Check exchange rates without opening the app. Home screen and lock screen widgets keep you informed at a glance.",
-  },
-];
-
 const Features = () => {
+  const { t } = useTranslation();
+  
+  const features = [
+    {
+      icon: Camera,
+      title: t('features.scan.title'),
+      description: t('features.scan.description'),
+    },
+    {
+      icon: Shield,
+      title: t('features.private.title'),
+      description: t('features.private.description'),
+    },
+    {
+      icon: Languages,
+      title: t('features.translation.title'),
+      description: t('features.translation.description'),
+    },
+    {
+      icon: Bookmark,
+      title: t('features.save.title'),
+      description: t('features.save.description'),
+    },
+    {
+      icon: Share2,
+      title: t('features.share.title'),
+      description: t('features.share.description'),
+    },
+    {
+      icon: Smartphone,
+      title: t('features.widgets.title'),
+      description: t('features.widgets.description'),
+    },
+  ];
   return (
     <section id="features" className="py-16 lg:py-24 bg-background relative overflow-hidden">
       {/* Subtle background pattern */}
@@ -67,14 +69,14 @@ const Features = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Powerful Features
+              {t('features.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Everything you need to shop confidently abroad
+            {t('features.title')}
           </h2>
           <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
-            Powerful features designed to make international travel stress-free and budget-friendly.
+            {t('features.description')}
           </p>
         </motion.div>
 

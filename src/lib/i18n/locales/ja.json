@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "機能",
+    "pricing": "料金",
+    "faq": "よくある質問"
+  },
+  "hero": {
+    "badge": "世界中の旅行者に信頼されています",
+    "title": "海外で二度と高額を支払わない。",
+    "titleHighlight": "スキャン。変換。節約。",
+    "description": "海外での暗算をやめましょう。価格タグ、メニュー、またはレシートにカメラを向けるだけで、即座に通貨変換ができます。入力不要、混乱なし—あなたの通貨での正確な価格だけです。",
+    "freeToDownload": "無料ダウンロード",
+    "private": "100%プライベート",
+    "noAccount": "アカウント不要"
+  },
+  "trustBadges": {
+    "private": "100%プライベート",
+    "currencies": "150以上の通貨",
+    "noAccount": "アカウント不要",
+    "instant": "即座に変換"
+  },
+  "features": {
+    "badge": "強力な機能",
+    "title": "海外で自信を持って買い物するために必要なすべて",
+    "description": "国際旅行をストレスフリーで予算に優しくするために設計された強力な機能。",
+    "scan": {
+      "title": "数秒でスキャン",
+      "description": "向ける、スキャン、完了。入力不要、手動入力不要。価格タグ、メニュー、またはレシートから2秒以内に即座に通貨変換を取得します。"
+    },
+    "private": {
+      "title": "100%プライベート＆セキュア",
+      "description": "写真はデバイスから出ることはありません。すべての処理は電話でローカルに実行されます—クラウドなし、サーバーなし、データ収集なし。"
+    },
+    "translation": {
+      "title": "スマート翻訳",
+      "description": "通貨変換だけでなく、価格ラベルや説明も翻訳します。どの言語でも、購入しているものを正確に理解できます。"
+    },
+    "save": {
+      "title": "保存と比較",
+      "description": "買い物中に価格を保存して後で比較します。さまざまな店舗で最良の取引を見つけたり、旅行予算を計画したりするのに最適です。"
+    },
+    "share": {
+      "title": "即座に共有",
+      "description": "変換された価格を旅行仲間と即座に共有します。請求書の分割、グループショッピング、または家の友人に見せるのに最適です。"
+    },
+    "widgets": {
+      "title": "ウィジェットとクイックアクセス",
+      "description": "アプリを開かずに為替レートを確認します。ホーム画面とロック画面のウィジェットで一目で情報を把握できます。"
+    }
+  },
+  "testimonials": {
+    "badge": "信頼とセキュリティ",
+    "title": "旅行者によって、旅行者のために構築",
+    "description": "海外で自信を持って買い物し、お金を節約するために必要なすべて",
+    "private": {
+      "title": "100%プライベート",
+      "description": "すべての処理はデバイスで行われます。写真は電話から出ることはありません。"
+    },
+    "fast": {
+      "title": "超高速",
+      "description": "2秒以内に即座に変換を取得します。待機なし、遅延なし。"
+    },
+    "currencies": {
+      "title": "150以上の通貨",
+      "description": "世界中のすべての主要通貨で動作します。どこに旅行しても変換できます。"
+    },
+    "noAccount": {
+      "title": "アカウント不要",
+      "description": "すぐに使用を開始できます。サインアップなし、メールなし、個人データの収集なし。"
+    },
+    "metrics": {
+      "private": "プライベート＆セキュア",
+      "currencies": "通貨",
+      "forever": "永久に",
+      "accountRequired": "アカウント必要"
+    }
+  },
+  "pricing": {
+    "badge": "シンプルな料金",
+    "title": "永久無料。プレミアム機能が間もなく登場。",
+    "description": "すべての基本機能を無料で取得。プレミアムは広告なしの体験とAI強化機能を解除します。",
+    "free": {
+      "title": "無料",
+      "price": "¥0",
+      "subtitle": "広告付き—ねえ、無料です！",
+      "features": {
+        "scanning": "即座の価格スキャン",
+        "share": "価格の共有と保存",
+        "translation": "ラベル翻訳",
+        "widgets": "ホーム画面ウィジェット"
+      }
+    },
+    "premium": {
+      "title": "プレミアム",
+      "price": "間もなく",
+      "subtitle": "AI強化機能付き広告なし",
+      "features": {
+        "everything": "無料版のすべて",
+        "noAds": "広告なし、永久に",
+        "ai": "AI強化の改善",
+        "more": "さらに機能が登場..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "質問がありますか？",
+    "title": "よくある質問",
+    "description": "CurrenSeeについて知っておくべきすべて",
+    "items": {
+      "scanning": {
+        "question": "価格スキャンはどのように機能しますか？",
+        "answer": "価格タグ、メニュー、またはレシートにカメラを向けるだけです。当社のアプリは高度なOCR（光学文字認識）を使用して価格を検出し、リアルタイムの為替レートを使用して即座に希望の通貨に変換します。"
+      },
+      "internet": {
+        "question": "インターネット接続は必要ですか？",
+        "answer": "リアルタイムの為替レートにはインターネット接続が最適です。ただし、オフライン使用のために為替レートを保存でき、アプリが読み込まれたら基本的なスキャン機能はオフラインで動作します。"
+      },
+      "privacy": {
+        "question": "私のデータはプライベートで安全ですか？",
+        "answer": "絶対に！すべての画像処理はデバイスで直接行われます。写真やスキャンデータをサーバーに送信することはありません。プライバシーが最優先事項です—処理の100%が電話でローカルに実行されます。"
+      },
+      "currencies": {
+        "question": "どの通貨がサポートされていますか？",
+        "answer": "CurrenSeeは、USD、EUR、GBP、JPY、CNYなどの主要通貨を含む、世界中の150以上の通貨をサポートしています。サポートされている任意の通貨間で変換できます。"
+      },
+      "free": {
+        "question": "アプリは本当に無料ですか？",
+        "answer": "はい！アプリは完全に無料でダウンロードして使用できます。無料版には、価格スキャン、通貨変換、ラベル翻訳、価格保存など、すべてのコア機能が含まれています。オプションの広告がありますが、コア機能を妨げることはありません。"
+      },
+      "account": {
+        "question": "アカウントを作成せずに使用できますか？",
+        "answer": "はい！CurrenSeeはアカウントを必要とせずに完全に動作します。ダウンロードして、開いて、スキャンを開始するだけです。サインアップなし、メールなし、面倒なし。"
+      },
+      "rates": {
+        "question": "為替レートはどの程度正確ですか？",
+        "answer": "信頼できる金融データプロバイダーからのリアルタイムの為替レートを使用しています。レートは精度を確保するために1日中頻繁に更新されます。購入時に実際の変換レートがわずかに異なる場合があることに注意してください。銀行や決済プロセッサーが独自の手数料を適用する場合があるためです。"
+      },
+      "countries": {
+        "question": "すべての国で動作しますか？",
+        "answer": "はい！CurrenSeeは世界中のどこでも動作します。価格タグ、メニュー、またはレシートを見ることができる限り、スキャンして変換できます。アプリは任意の言語と形式の価格をサポートしています。"
+      }
+    }
+  },
+  "cta": {
+    "badge": "始める準備はできましたか？",
+    "title": "次の旅行でお金を節約し始めましょう",
+    "description": "今すぐ無料でダウンロード—アカウントなし、クレジットカードなし、即座の通貨変換だけ。海外で二度と高額を支払わない賢い旅行者に参加しましょう。",
+    "instantSetup": "即座のセットアップ",
+    "private": "100%プライベート",
+    "noAds": "中断する広告なし"
+  },
+  "footer": {
+    "support": "サポート",
+    "privacy": "プライバシーポリシー",
+    "copyright": "© {{year}} CurrenSee. 全著作権所有。"
+  },
+  "getUpdates": {
+    "badge": "製品アップデート",
+    "title": "いち早く知る",
+    "description": "新機能、改善、アップデートのリリース時に通知を受け取ります。共有する価値のあるものがある場合のみメールをお送りします。",
+    "emailPlaceholder": "メールアドレスを入力",
+    "buttonText": "アップデートを受け取る",
+    "noSpam": "スパムなし、永久に",
+    "private": "100%プライベート",
+    "unsubscribe": "いつでも登録解除可能",
+    "setupRequired": "セットアップが必要",
+    "setupMessage": "メール収集を有効にするには、Web3FormsキーまたはFormspree IDをこのコンポーネントに追加してください。",
+    "setupLink": "Web3Formsキーを取得する："
+  },
+  "emailSignup": {
+    "placeholder": "メールを入力",
+    "subscribe": "購読",
+    "subscribed": "購読済み！",
+    "successMessage": "準備完了！アップデートについてお知らせします。",
+    "errorInvalidEmail": "有効なメールアドレスを入力してください",
+    "errorGeneric": "問題が発生しました。もう一度お試しください。"
+  },
+  "floatingCTA": {
+    "title": "CurrenSeeを無料ダウンロード",
+    "subtitle": "海外で二度と高額を支払わない",
+    "dismiss": "閉じる"
+  },
+  "support": {
+    "badge": "お手伝いします",
+    "title": "サポートとフィードバック",
+    "description": "アプリのヘルプが必要ですか、それともフィードバックを共有したいですか？あなたのニーズに最適なオプションを選択してください。",
+    "supportTab": "サポート",
+    "feedbackTab": "フィードバック",
+    "getSupport": {
+      "title": "サポートを受ける",
+      "description": "問題が発生しているか、質問がありますか？以下のフォームに記入していただければ、お手伝いします。"
+    },
+    "shareFeedback": {
+      "title": "フィードバックを共有",
+      "description": "アイデア、提案、またはバグの報告がありますか？お聞かせください！"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "どのようなヘルプが必要ですか？ *",
+    "supportTypePlaceholder": "サポートタイプを選択",
+    "supportTypes": {
+      "technical": "技術的な問題",
+      "question": "一般的な質問",
+      "bug": "バグレポート",
+      "other": "その他"
+    },
+    "emailLabel": "メールアドレス *",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "サポートリクエストに返信するためにメールアドレスが必要です。",
+    "messageLabel": "問題や質問を説明してください *",
+    "messagePlaceholder": "問題や質問についてできるだけ詳しく説明してください...",
+    "submit": "サポートリクエストを送信",
+    "submitting": "送信中...",
+    "successTitle": "サポートリクエストが送信されました！",
+    "successDescription": "リクエストを受領しました。すぐに返信いたします。",
+    "errorTitle": "エラー",
+    "errorDescription": "サポートリクエストの送信に失敗しました。後でもう一度お試しください。",
+    "messageRequired": "メッセージが必要です",
+    "messageRequiredDesc": "サポートリクエストのメッセージを入力してください。",
+    "emailRequired": "メールアドレスが必要です",
+    "emailRequiredDesc": "サポートリクエストに返信できるようにメールアドレスを入力してください。",
+    "devMode": "開発モード",
+    "devModeDesc": "サポートリクエストの収集を有効にするには、Web3FormsキーまたはFormspree IDをこのコンポーネントに追加してください。",
+    "responseTime": "通常24時間以内に返信します",
+    "checkFAQ": "よくある質問についてはFAQを確認してください"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "これはどのようなフィードバックですか？",
+    "feedbackTypePlaceholder": "フィードバックタイプを選択",
+    "feedbackTypes": {
+      "feature": "機能リクエスト",
+      "bug": "バグレポート",
+      "feedback": "一般的なフィードバック",
+      "other": "その他"
+    },
+    "messageLabel": "フィードバック *",
+    "messagePlaceholder": "ご意見、ご希望の機能、または遭遇した問題をお聞かせください...",
+    "emailLabel": "メールアドレス（オプション）",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "必要に応じてフォローアップにのみ使用します。メールアドレスは共有されません。",
+    "submit": "フィードバックを送信",
+    "submitting": "送信中...",
+    "successTitle": "ありがとうございます！",
+    "successDescription": "フィードバックを受領しました。ご意見ありがとうございます！",
+    "errorTitle": "エラー",
+    "errorDescription": "フィードバックの送信に失敗しました。後でもう一度お試しください。",
+    "messageRequired": "メッセージが必要です",
+    "messageRequiredDesc": "フィードバックメッセージを入力してください。",
+    "devMode": "開発モード",
+    "devModeDesc": "フィードバック収集を有効にするには、Web3FormsキーまたはFormspree IDをこのコンポーネントに追加してください。",
+    "readEverySubmission": "すべての提出物を読みます",
+    "inputShapesApp": "あなたの意見がアプリを形作ります",
+    "featureRequestsWelcome": "機能リクエストを歓迎します"
+  },
+  "developerFeedback": {
+    "badge": "改善にご協力ください",
+    "title": "フィードバックを共有",
+    "description": "CurrenSeeを積極的に開発しており、あなたのフィードバックがより良いアプリの構築に役立ちます。アイデアを共有し、バグを報告し、次に見たいものを教えてください。"
+  },
+  "language": {
+    "select": "言語を選択",
+    "english": "英語",
+    "spanish": "スペイン語",
+    "french": "フランス語",
+    "german": "ドイツ語",
+    "italian": "イタリア語",
+    "japanese": "日本語",
+    "chinese": "中国語",
+    "portuguese": "ポルトガル語",
+    "russian": "ロシア語",
+    "arabic": "アラビア語",
+    "korean": "韓国語",
+    "romanian": "ルーマニア語"
+  }
+}

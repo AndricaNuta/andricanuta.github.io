@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Accordion,
   AccordionContent,
@@ -8,42 +9,43 @@ import {
 } from "@/components/ui/accordion";
 import { analytics } from "@/lib/analytics";
 
-const faqs = [
-  {
-    question: "How does the price scanning work?",
-    answer: "Simply point your camera at any price tag, menu, or receipt. Our app uses advanced OCR (Optical Character Recognition) to detect prices and instantly converts them to your preferred currency using real-time exchange rates.",
-  },
-  {
-    question: "Do I need an internet connection?",
-    answer: "The app works best with an internet connection for real-time exchange rates. However, you can save exchange rates for offline use, and basic scanning features work offline once the app is loaded.",
-  },
-  {
-    question: "Is my data private and secure?",
-    answer: "Absolutely! All image processing happens directly on your device. We never send your photos or scanned data to our servers. Your privacy is our top priority—100% of the processing is done locally on your phone.",
-  },
-  {
-    question: "Which currencies are supported?",
-    answer: "CurrenSee supports over 150 currencies worldwide, including all major currencies like USD, EUR, GBP, JPY, CNY, and many more. You can convert between any supported currencies.",
-  },
-  {
-    question: "Is the app really free?",
-    answer: "Yes! The app is completely free to download and use. The free version includes all core features: price scanning, currency conversion, label translation, and price saving. There are optional ads, but they don't interfere with the core functionality.",
-  },
-  {
-    question: "Can I use it without creating an account?",
-    answer: "Yes! CurrenSee works completely without requiring an account. Just download, open, and start scanning. No sign-up, no email, no hassle.",
-  },
-  {
-    question: "How accurate are the exchange rates?",
-    answer: "We use real-time exchange rates from reliable financial data providers. Rates are updated frequently throughout the day to ensure accuracy. Note that actual conversion rates may vary slightly when you make purchases, as banks and payment processors may apply their own fees.",
-  },
-  {
-    question: "Does it work in all countries?",
-    answer: "Yes! CurrenSee works anywhere in the world. As long as you can see a price tag, menu, or receipt, you can scan and convert it. The app supports prices in any language and format.",
-  },
-];
-
 const FAQ = () => {
+  const { t } = useTranslation();
+  
+  const faqs = [
+    {
+      question: t('faq.items.scanning.question'),
+      answer: t('faq.items.scanning.answer'),
+    },
+    {
+      question: t('faq.items.internet.question'),
+      answer: t('faq.items.internet.answer'),
+    },
+    {
+      question: t('faq.items.privacy.question'),
+      answer: t('faq.items.privacy.answer'),
+    },
+    {
+      question: t('faq.items.currencies.question'),
+      answer: t('faq.items.currencies.answer'),
+    },
+    {
+      question: t('faq.items.free.question'),
+      answer: t('faq.items.free.answer'),
+    },
+    {
+      question: t('faq.items.account.question'),
+      answer: t('faq.items.account.answer'),
+    },
+    {
+      question: t('faq.items.rates.question'),
+      answer: t('faq.items.rates.answer'),
+    },
+    {
+      question: t('faq.items.countries.question'),
+      answer: t('faq.items.countries.answer'),
+    },
+  ];
   const [openItem, setOpenItem] = useState<string>("");
 
   const handleValueChange = (value: string) => {
@@ -93,14 +95,14 @@ const FAQ = () => {
             style={{ willChange: 'transform, opacity' }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Got Questions?
+              {t('faq.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Frequently asked questions
+            {t('faq.title')}
           </h2>
           <p className="text-muted-foreground text-xl leading-relaxed font-normal md:font-normal">
-            Everything you need to know about CurrenSee
+            {t('faq.description')}
           </p>
         </motion.div>
 

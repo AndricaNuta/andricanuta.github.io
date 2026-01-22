@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "기능",
+    "pricing": "가격",
+    "faq": "자주 묻는 질문"
+  },
+  "hero": {
+    "badge": "전 세계 여행자들이 신뢰합니다",
+    "title": "해외에서 더 이상 과도하게 지불하지 마세요.",
+    "titleHighlight": "스캔. 변환. 절약.",
+    "description": "해외에서 암산을 그만두세요. 가격표, 메뉴 또는 영수증에 카메라를 향하면 즉시 통화 변환이 가능합니다. 입력 불필요, 혼란 없음—귀하의 통화로 정확한 가격만 제공합니다.",
+    "freeToDownload": "무료 다운로드",
+    "private": "100% 비공개",
+    "noAccount": "계정 불필요"
+  },
+  "trustBadges": {
+    "private": "100% 비공개",
+    "currencies": "150개 이상의 통화",
+    "noAccount": "계정 불필요",
+    "instant": "즉시 변환"
+  },
+  "features": {
+    "badge": "강력한 기능",
+    "title": "해외에서 자신 있게 쇼핑하는 데 필요한 모든 것",
+    "description": "국제 여행을 스트레스 없이 예산 친화적으로 만드는 강력한 기능.",
+    "scan": {
+      "title": "몇 초 만에 스캔",
+      "description": "향하고, 스캔하고, 완료. 입력 불필요, 수동 입력 불필요. 2초 이내에 가격표, 메뉴 또는 영수증에서 즉시 통화 변환을 받으세요."
+    },
+    "private": {
+      "title": "100% 비공개 및 안전",
+      "description": "사진은 기기를 떠나지 않습니다. 모든 처리는 휴대폰에서 로컬로 수행됩니다—클라우드 없음, 서버 없음, 데이터 수집 없음."
+    },
+    "translation": {
+      "title": "스마트 번역",
+      "description": "통화 변환뿐만 아니라 가격 라벨과 설명도 번역합니다. 어떤 언어로든 구매하는 것을 정확히 이해하세요."
+    },
+    "save": {
+      "title": "저장 및 비교",
+      "description": "쇼핑 중 가격을 저장하여 나중에 비교하세요. 다양한 상점에서 최고의 거래를 찾거나 여행 예산을 계획하는 데 완벽합니다."
+    },
+    "share": {
+      "title": "즉시 공유",
+      "description": "변환된 가격을 여행 동반자와 즉시 공유하세요. 청구서 분할, 그룹 쇼핑 또는 집에 있는 친구들에게 보여주기에 좋습니다."
+    },
+    "widgets": {
+      "title": "위젯 및 빠른 액세스",
+      "description": "앱을 열지 않고 환율을 확인하세요. 홈 화면 및 잠금 화면 위젯이 한눈에 정보를 제공합니다."
+    }
+  },
+  "testimonials": {
+    "badge": "신뢰 및 보안",
+    "title": "여행자를 위해, 여행자가 만든",
+    "description": "해외에서 자신 있게 쇼핑하고 돈을 절약하는 데 필요한 모든 것",
+    "private": {
+      "title": "100% 비공개",
+      "description": "모든 처리는 기기에서 수행됩니다. 사진은 휴대폰을 떠나지 않습니다."
+    },
+    "fast": {
+      "title": "번개처럼 빠름",
+      "description": "2초 이내에 즉시 변환을 받으세요. 대기 없음, 지연 없음."
+    },
+    "currencies": {
+      "title": "150개 이상의 통화",
+      "description": "전 세계 모든 주요 통화에서 작동합니다. 어디를 여행하든 변환하세요."
+    },
+    "noAccount": {
+      "title": "계정 불필요",
+      "description": "즉시 사용을 시작하세요. 가입 없음, 이메일 없음, 개인 데이터 수집 없음."
+    },
+    "metrics": {
+      "private": "비공개 및 안전",
+      "currencies": "통화",
+      "forever": "영원히",
+      "accountRequired": "계정 필요"
+    }
+  },
+  "pricing": {
+    "badge": "간단한 가격",
+    "title": "영원히 무료. 프리미엄 기능 곧 출시.",
+    "description": "모든 필수 기능을 무료로 받으세요. 프리미엄은 광고 없는 경험과 AI 기반 향상을 잠금 해제합니다.",
+    "free": {
+      "title": "무료",
+      "price": "₩0",
+      "subtitle": "광고 지원—이봐, 무료예요!",
+      "features": {
+        "scanning": "즉시 가격 스캔",
+        "share": "가격 공유 및 저장",
+        "translation": "라벨 번역",
+        "widgets": "홈 화면 위젯"
+      }
+    },
+    "premium": {
+      "title": "프리미엄",
+      "price": "곧 출시",
+      "subtitle": "AI 기반 기능이 있는 광고 없음",
+      "features": {
+        "everything": "무료의 모든 것",
+        "noAds": "광고 없음, 영원히",
+        "ai": "AI 기반 개선",
+        "more": "더 많은 기능이 곧 출시됩니다..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "질문이 있으신가요?",
+    "title": "자주 묻는 질문",
+    "description": "CurrenSee에 대해 알아야 할 모든 것",
+    "items": {
+      "scanning": {
+        "question": "가격 스캔은 어떻게 작동하나요?",
+        "answer": "가격표, 메뉴 또는 영수증에 카메라를 향하기만 하면 됩니다. 우리 앱은 고급 OCR(광학 문자 인식)을 사용하여 가격을 감지하고 실시간 환율을 사용하여 즉시 선호하는 통화로 변환합니다."
+      },
+      "internet": {
+        "question": "인터넷 연결이 필요하나요?",
+        "answer": "앱은 실시간 환율을 위해 인터넷 연결이 가장 잘 작동합니다. 그러나 오프라인 사용을 위해 환율을 저장할 수 있으며, 앱이 로드되면 기본 스캔 기능이 오프라인으로 작동합니다."
+      },
+      "privacy": {
+        "question": "내 데이터는 비공개이고 안전한가요?",
+        "answer": "절대적으로! 모든 이미지 처리는 기기에서 직접 수행됩니다. 사진이나 스캔한 데이터를 서버로 전송하지 않습니다. 귀하의 프라이버시가 최우선입니다—처리의 100%가 휴대폰에서 로컬로 수행됩니다."
+      },
+      "currencies": {
+        "question": "어떤 통화가 지원되나요?",
+        "answer": "CurrenSee는 USD, EUR, GBP, JPY, CNY를 포함한 전 세계 150개 이상의 통화를 지원합니다. 지원되는 모든 통화 간에 변환할 수 있습니다."
+      },
+      "free": {
+        "question": "앱이 정말 무료인가요?",
+        "answer": "예! 앱은 완전히 무료로 다운로드하고 사용할 수 있습니다. 무료 버전에는 모든 핵심 기능이 포함됩니다: 가격 스캔, 통화 변환, 라벨 번역 및 가격 저장. 선택적 광고가 있지만 핵심 기능을 방해하지 않습니다."
+      },
+      "account": {
+        "question": "계정을 만들지 않고 사용할 수 있나요?",
+        "answer": "예! CurrenSee는 계정 없이 완전히 작동합니다. 다운로드하고, 열고, 스캔을 시작하기만 하면 됩니다. 가입 없음, 이메일 없음, 번거로움 없음."
+      },
+      "rates": {
+        "question": "환율은 얼마나 정확한가요?",
+        "answer": "신뢰할 수 있는 금융 데이터 제공업체의 실시간 환율을 사용합니다. 정확성을 보장하기 위해 하루 종일 자주 업데이트됩니다. 실제 변환율은 구매 시 약간 다를 수 있습니다. 은행 및 결제 프로세서가 자체 수수료를 적용할 수 있기 때문입니다."
+      },
+      "countries": {
+        "question": "모든 국가에서 작동하나요?",
+        "answer": "예! CurrenSee는 전 세계 어디에서나 작동합니다. 가격표, 메뉴 또는 영수증을 볼 수 있는 한 스캔하고 변환할 수 있습니다. 앱은 모든 언어와 형식의 가격을 지원합니다."
+      }
+    }
+  },
+  "cta": {
+    "badge": "시작할 준비가 되셨나요?",
+    "title": "다음 여행에서 돈을 절약하기 시작하세요",
+    "description": "지금 무료로 다운로드하세요—계정 없음, 신용 카드 없음, 즉시 통화 변환만. 해외에서 결코 과도하게 지불하지 않는 똑똑한 여행자에 합류하세요.",
+    "instantSetup": "즉시 설정",
+    "private": "100% 비공개",
+    "noAds": "방해하는 광고 없음"
+  },
+  "footer": {
+    "support": "지원",
+    "privacy": "개인정보 보호정책",
+    "copyright": "© {{year}} CurrenSee. 모든 권리 보유."
+  },
+  "getUpdates": {
+    "badge": "제품 업데이트",
+    "title": "가장 먼저 알아보기",
+    "description": "새로운 기능, 개선 사항 및 업데이트를 출시할 때 알림을 받으세요. 공유할 가치가 있는 것이 있을 때만 이메일을 보내드립니다.",
+    "emailPlaceholder": "이메일 주소를 입력하세요",
+    "buttonText": "업데이트 받기",
+    "noSpam": "스팸 없음, 영원히",
+    "private": "100% 비공개",
+    "unsubscribe": "언제든지 구독 취소",
+    "setupRequired": "설정 필요",
+    "setupMessage": "이메일 수집을 활성화하려면 Web3Forms 키 또는 Formspree ID를 이 구성 요소에 추가하세요.",
+    "setupLink": "Web3Forms 키를 다음에서 가져오기:"
+  },
+  "emailSignup": {
+    "placeholder": "이메일을 입력하세요",
+    "subscribe": "구독",
+    "subscribed": "구독됨!",
+    "successMessage": "모든 준비가 완료되었습니다! 업데이트에 대해 알려드리겠습니다.",
+    "errorInvalidEmail": "유효한 이메일 주소를 입력하세요",
+    "errorGeneric": "문제가 발생했습니다. 다시 시도해 주세요."
+  },
+  "floatingCTA": {
+    "title": "CurrenSee 무료 다운로드",
+    "subtitle": "해외에서 더 이상 과도하게 지불하지 마세요",
+    "dismiss": "닫기"
+  },
+  "support": {
+    "badge": "도움을 드리겠습니다",
+    "title": "지원 및 피드백",
+    "description": "앱에 대한 도움이 필요하거나 피드백을 공유하고 싶으신가요? 귀하의 요구에 가장 적합한 옵션을 선택하세요.",
+    "supportTab": "지원",
+    "feedbackTab": "피드백",
+    "getSupport": {
+      "title": "지원 받기",
+      "description": "문제가 발생했거나 질문이 있으신가요? 아래 양식을 작성해 주시면 도와드리겠습니다."
+    },
+    "shareFeedback": {
+      "title": "피드백 공유",
+      "description": "아이디어, 제안이 있거나 버그를 보고하고 싶으신가요? 귀하의 의견을 듣고 싶습니다!"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "어떤 도움이 필요하신가요? *",
+    "supportTypePlaceholder": "지원 유형 선택",
+    "supportTypes": {
+      "technical": "기술적 문제",
+      "question": "일반 질문",
+      "bug": "버그 보고",
+      "other": "기타"
+    },
+    "emailLabel": "이메일 *",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "지원 요청에 답변하기 위해 이메일이 필요합니다.",
+    "messageLabel": "문제나 질문을 설명하세요 *",
+    "messagePlaceholder": "문제나 질문에 대해 가능한 한 자세히 설명해 주세요...",
+    "submit": "지원 요청 제출",
+    "submitting": "제출 중...",
+    "successTitle": "지원 요청이 제출되었습니다!",
+    "successDescription": "요청을 받았으며 곧 답변드리겠습니다.",
+    "errorTitle": "오류",
+    "errorDescription": "지원 요청 제출에 실패했습니다. 나중에 다시 시도해 주세요.",
+    "messageRequired": "메시지 필요",
+    "messageRequiredDesc": "지원 요청 메시지를 입력하세요.",
+    "emailRequired": "이메일 필요",
+    "emailRequiredDesc": "지원 요청에 답변할 수 있도록 이메일을 입력하세요.",
+    "devMode": "개발 모드",
+    "devModeDesc": "지원 요청 수집을 활성화하려면 Web3Forms 키 또는 Formspree ID를 이 구성 요소에 추가하세요.",
+    "responseTime": "일반적으로 24시간 이내에 답변합니다",
+    "checkFAQ": "일반적인 질문은 FAQ를 확인하세요"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "이것은 어떤 종류의 피드백인가요?",
+    "feedbackTypePlaceholder": "피드백 유형 선택",
+    "feedbackTypes": {
+      "feature": "기능 요청",
+      "bug": "버그 보고",
+      "feedback": "일반 피드백",
+      "other": "기타"
+    },
+    "messageLabel": "피드백 *",
+    "messagePlaceholder": "생각하시는 바, 원하시는 기능 또는 겪으신 문제를 알려주세요...",
+    "emailLabel": "이메일 (선택사항)",
+    "emailPlaceholder": "your@email.com",
+    "emailHelp": "필요한 경우에만 후속 조치에 사용합니다. 이메일은 공유되지 않습니다.",
+    "submit": "피드백 제출",
+    "submitting": "제출 중...",
+    "successTitle": "감사합니다!",
+    "successDescription": "피드백을 받았습니다. 의견을 주셔서 감사합니다!",
+    "errorTitle": "오류",
+    "errorDescription": "피드백 제출에 실패했습니다. 나중에 다시 시도해 주세요.",
+    "messageRequired": "메시지 필요",
+    "messageRequiredDesc": "피드백 메시지를 입력하세요.",
+    "devMode": "개발 모드",
+    "devModeDesc": "피드백 수집을 활성화하려면 Web3Forms 키 또는 Formspree ID를 이 구성 요소에 추가하세요.",
+    "readEverySubmission": "모든 제출물을 읽습니다",
+    "inputShapesApp": "귀하의 의견이 앱을 형성합니다",
+    "featureRequestsWelcome": "기능 요청을 환영합니다"
+  },
+  "developerFeedback": {
+    "badge": "개선에 도움을 주세요",
+    "title": "피드백 공유",
+    "description": "CurrenSee를 적극적으로 개발하고 있으며 귀하의 피드백이 더 나은 앱을 만드는 데 도움이 됩니다. 아이디어를 공유하고 버그를 보고하거나 다음에 보고 싶은 것을 알려주세요."
+  },
+  "language": {
+    "select": "언어 선택",
+    "english": "영어",
+    "spanish": "스페인어",
+    "french": "프랑스어",
+    "german": "독일어",
+    "italian": "이탈리아어",
+    "japanese": "일본어",
+    "chinese": "중국어",
+    "portuguese": "포르투갈어",
+    "russian": "러시아어",
+    "arabic": "아랍어",
+    "korean": "한국어",
+    "romanian": "루마니아어"
+  }
+}

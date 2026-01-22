@@ -1,0 +1,275 @@
+{
+  "nav": {
+    "features": "Funzionalità",
+    "pricing": "Prezzi",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Fidato dai viaggiatori di tutto il mondo",
+    "title": "Non pagare mai troppo all'estero.",
+    "titleHighlight": "Scansiona. Converti. Risparmia.",
+    "description": "Smetti di fare calcoli mentali all'estero. Punta la fotocamera su qualsiasi cartellino del prezzo, menu o ricevuta e ottieni conversioni di valuta istantanee. Nessuna digitazione, nessuna confusione—solo prezzi accurati nella tua valuta.",
+    "freeToDownload": "Gratuito da scaricare",
+    "private": "100% privato",
+    "noAccount": "Nessun account necessario"
+  },
+  "trustBadges": {
+    "private": "100% Privato",
+    "currencies": "150+ Valute",
+    "noAccount": "Nessun Account Necessario",
+    "instant": "Conversione Istantanea"
+  },
+  "features": {
+    "badge": "Funzionalità Potenti",
+    "title": "Tutto ciò di cui hai bisogno per fare acquisti con sicurezza all'estero",
+    "description": "Funzionalità potenti progettate per rendere i viaggi internazionali senza stress e convenienti.",
+    "scan": {
+      "title": "Scansiona in Secondi",
+      "description": "Punta, scansiona, fatto. Nessuna digitazione, nessun inserimento manuale. Ottieni conversioni di valuta istantanee da qualsiasi cartellino del prezzo, menu o ricevuta in meno di 2 secondi."
+    },
+    "private": {
+      "title": "100% Privato e Sicuro",
+      "description": "Le tue foto non lasciano mai il tuo dispositivo. Tutta l'elaborazione avviene localmente sul tuo telefono—nessun cloud, nessun server, nessuna raccolta di dati."
+    },
+    "translation": {
+      "title": "Traduzione Intelligente",
+      "description": "Non solo conversione di valuta—traduci anche etichette dei prezzi e descrizioni. Comprendi esattamente cosa stai acquistando, in qualsiasi lingua."
+    },
+    "save": {
+      "title": "Salva e Confronta",
+      "description": "Salva i prezzi mentre fai acquisti per confrontarli in seguito. Perfetto per trovare le migliori offerte in diversi negozi o pianificare il tuo budget di viaggio."
+    },
+    "share": {
+      "title": "Condividi Istantaneamente",
+      "description": "Condividi prezzi convertiti con i compagni di viaggio istantaneamente. Ottimo per dividere i conti, fare acquisti di gruppo o mostrare agli amici a casa."
+    },
+    "widgets": {
+      "title": "Widget e Accesso Rapido",
+      "description": "Controlla i tassi di cambio senza aprire l'app. I widget della schermata principale e di blocco ti tengono informato a colpo d'occhio."
+    }
+  },
+  "testimonials": {
+    "badge": "Fiducia e Sicurezza",
+    "title": "Creato per i viaggiatori, dai viaggiatori",
+    "description": "Tutto ciò di cui hai bisogno per fare acquisti con sicurezza e risparmiare denaro all'estero",
+    "private": {
+      "title": "100% Privato",
+      "description": "Tutta l'elaborazione avviene sul tuo dispositivo. Le tue foto non lasciano mai il tuo telefono."
+    },
+    "fast": {
+      "title": "Lampo Rapido",
+      "description": "Ottieni conversioni istantanee in meno di 2 secondi. Nessuna attesa, nessun ritardo."
+    },
+    "currencies": {
+      "title": "150+ Valute",
+      "description": "Funziona con tutte le principali valute mondiali. Converti ovunque tu viaggi."
+    },
+    "noAccount": {
+      "title": "Nessun Account Richiesto",
+      "description": "Inizia a usare immediatamente. Nessuna registrazione, nessuna email, nessun problema."
+    },
+    "metrics": {
+      "private": "Privato e Sicuro",
+      "currencies": "Valute",
+      "forever": "Per Sempre",
+      "accountRequired": "Account Richiesto"
+    }
+  },
+  "pricing": {
+    "badge": "Prezzi Semplici",
+    "title": "Gratuito per sempre. Funzionalità premium in arrivo.",
+    "description": "Ottieni tutte le funzionalità essenziali gratuitamente. Premium sblocca un'esperienza senza pubblicità e miglioramenti alimentati dall'IA.",
+    "free": {
+      "title": "Gratuito",
+      "price": "0 €",
+      "subtitle": "Con pubblicità—ehi, è gratuito!",
+      "features": {
+        "scanning": "Scansione prezzi istantanea",
+        "share": "Condividi e salva prezzi",
+        "translation": "Traduzione etichette",
+        "widgets": "Widget schermata principale"
+      }
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "In arrivo",
+      "subtitle": "Senza pubblicità con funzionalità alimentate dall'IA",
+      "features": {
+        "everything": "Tutto in Gratuito",
+        "noAds": "Nessuna pubblicità, mai",
+        "ai": "Miglioramenti alimentati dall'IA",
+        "more": "Altre funzionalità in arrivo..."
+      }
+    }
+  },
+  "faq": {
+    "badge": "Hai Domande?",
+    "title": "Domande frequenti",
+    "description": "Tutto ciò che devi sapere su CurrenSee",
+    "items": {
+      "scanning": {
+        "question": "Come funziona la scansione dei prezzi?",
+        "answer": "Punta semplicemente la fotocamera su qualsiasi cartellino del prezzo, menu o ricevuta. La nostra app utilizza OCR avanzato (Riconoscimento Ottico dei Caratteri) per rilevare i prezzi e convertirli istantaneamente nella tua valuta preferita utilizzando tassi di cambio in tempo reale."
+      },
+      "internet": {
+        "question": "Ho bisogno di una connessione Internet?",
+        "answer": "L'app funziona meglio con una connessione Internet per i tassi di cambio in tempo reale. Tuttavia, puoi salvare i tassi di cambio per l'uso offline e le funzionalità di scansione di base funzionano offline una volta che l'app è caricata."
+      },
+      "privacy": {
+        "question": "I miei dati sono privati e sicuri?",
+        "answer": "Assolutamente! Tutta l'elaborazione delle immagini avviene direttamente sul tuo dispositivo. Non inviamo mai le tue foto o i dati scansionati ai nostri server. La tua privacy è la nostra massima priorità—100% dell'elaborazione viene eseguita localmente sul tuo telefono."
+      },
+      "currencies": {
+        "question": "Quali valute sono supportate?",
+        "answer": "CurrenSee supporta oltre 150 valute in tutto il mondo, inclusi tutti i principali come USD, EUR, GBP, JPY, CNY e molti altri. Puoi convertire tra qualsiasi valuta supportata."
+      },
+      "free": {
+        "question": "L'app è davvero gratuita?",
+        "answer": "Sì! L'app è completamente gratuita da scaricare e usare. La versione gratuita include tutte le funzionalità principali: scansione prezzi, conversione valuta, traduzione etichette e salvataggio prezzi. Ci sono pubblicità opzionali, ma non interferiscono con la funzionalità principale."
+      },
+      "account": {
+        "question": "Posso usarla senza creare un account?",
+        "answer": "Sì! CurrenSee funziona completamente senza richiedere un account. Basta scaricare, aprire e iniziare a scansionare. Nessuna registrazione, nessuna email, nessun problema."
+      },
+      "rates": {
+        "question": "Quanto sono accurati i tassi di cambio?",
+        "answer": "Utilizziamo tassi di cambio in tempo reale da fornitori di dati finanziari affidabili. I tassi vengono aggiornati frequentemente durante il giorno per garantire l'accuratezza. Nota che i tassi di conversione effettivi possono variare leggermente quando effettui acquisti, poiché banche e processori di pagamento possono applicare le proprie commissioni."
+      },
+      "countries": {
+        "question": "Funziona in tutti i paesi?",
+        "answer": "Sì! CurrenSee funziona ovunque nel mondo. Finché puoi vedere un cartellino del prezzo, un menu o una ricevuta, puoi scansionarlo e convertirlo. L'app supporta prezzi in qualsiasi lingua e formato."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Pronto per Iniziare?",
+    "title": "Inizia a risparmiare denaro nel tuo prossimo viaggio",
+    "description": "Scarica gratuitamente ora—nessun account, nessuna carta di credito, solo conversione valuta istantanea. Unisciti ai viaggiatori intelligenti che non pagano mai troppo all'estero.",
+    "instantSetup": "Configurazione istantanea",
+    "private": "100% privato",
+    "noAds": "Nessuna pubblicità interrompente"
+  },
+  "footer": {
+    "support": "Supporto",
+    "privacy": "Informativa sulla Privacy",
+    "copyright": "© {{year}} CurrenSee. Tutti i diritti riservati."
+  },
+  "getUpdates": {
+    "badge": "Aggiornamenti del Prodotto",
+    "title": "Sii il primo a saperlo",
+    "description": "Ricevi notifiche quando lanciamo nuove funzionalità, miglioramenti e aggiornamenti. Ti invieremo un'email solo quando ci sarà qualcosa di importante da condividere.",
+    "emailPlaceholder": "Inserisci il tuo indirizzo email",
+    "buttonText": "Ricevi Aggiornamenti",
+    "noSpam": "Niente spam, mai",
+    "private": "100% privato",
+    "unsubscribe": "Disiscriviti in qualsiasi momento",
+    "setupRequired": "Configurazione Richiesta",
+    "setupMessage": "Per abilitare la raccolta email, aggiungi la tua chiave Web3Forms o ID Formspree a questo componente.",
+    "setupLink": "Ottieni la tua chiave Web3Forms su"
+  },
+  "emailSignup": {
+    "placeholder": "Inserisci la tua email",
+    "subscribe": "Iscriviti",
+    "subscribed": "Iscritto!",
+    "successMessage": "Tutto pronto! Ti notificheremo sugli aggiornamenti.",
+    "errorInvalidEmail": "Inserisci un indirizzo email valido",
+    "errorGeneric": "Qualcosa è andato storto. Riprova."
+  },
+  "floatingCTA": {
+    "title": "Scarica CurrenSee Gratis",
+    "subtitle": "Non pagare mai troppo all'estero",
+    "dismiss": "Chiudi"
+  },
+  "support": {
+    "badge": "Siamo Qui per Aiutare",
+    "title": "Supporto e Feedback",
+    "description": "Hai bisogno di aiuto con l'app o hai feedback da condividere? Scegli l'opzione che meglio si adatta alle tue esigenze.",
+    "supportTab": "Supporto",
+    "feedbackTab": "Feedback",
+    "getSupport": {
+      "title": "Ottieni Supporto",
+      "description": "Stai riscontrando un problema o hai una domanda? Compila il modulo qui sotto e ti aiuteremo."
+    },
+    "shareFeedback": {
+      "title": "Condividi il Tuo Feedback",
+      "description": "Hai idee, suggerimenti o vuoi segnalare un bug? Ci piacerebbe sentirti!"
+    }
+  },
+  "supportForm": {
+    "supportTypeLabel": "Di cosa hai bisogno? *",
+    "supportTypePlaceholder": "Seleziona il tipo di supporto",
+    "supportTypes": {
+      "technical": "Problema Tecnico",
+      "question": "Domanda Generale",
+      "bug": "Segnalazione Bug",
+      "other": "Altro"
+    },
+    "emailLabel": "La tua email *",
+    "emailPlaceholder": "tua@email.com",
+    "emailHelp": "Abbiamo bisogno della tua email per rispondere alla tua richiesta di supporto.",
+    "messageLabel": "Descrivi il tuo problema o domanda *",
+    "messagePlaceholder": "Fornisci il maggior numero di dettagli possibile sul tuo problema o domanda...",
+    "submit": "Invia Richiesta di Supporto",
+    "submitting": "Invio in corso...",
+    "successTitle": "Richiesta di supporto inviata!",
+    "successDescription": "Abbiamo ricevuto la tua richiesta e ti risponderemo presto.",
+    "errorTitle": "Errore",
+    "errorDescription": "Invio della richiesta di supporto fallito. Riprova più tardi.",
+    "messageRequired": "Messaggio richiesto",
+    "messageRequiredDesc": "Inserisci il messaggio della tua richiesta di supporto.",
+    "emailRequired": "Email richiesta",
+    "emailRequiredDesc": "Inserisci la tua email così possiamo rispondere alla tua richiesta di supporto.",
+    "devMode": "Modalità Sviluppo",
+    "devModeDesc": "Per abilitare la raccolta di richieste di supporto, aggiungi la tua chiave Web3Forms o ID Formspree a questo componente.",
+    "responseTime": "Rispondiamo generalmente entro 24 ore",
+    "checkFAQ": "Controlla le FAQ per domande comuni"
+  },
+  "feedbackForm": {
+    "feedbackTypeLabel": "Che tipo di feedback è questo?",
+    "feedbackTypePlaceholder": "Seleziona il tipo di feedback",
+    "feedbackTypes": {
+      "feature": "Richiesta Funzionalità",
+      "bug": "Segnalazione Bug",
+      "feedback": "Feedback Generale",
+      "other": "Altro"
+    },
+    "messageLabel": "Il tuo feedback *",
+    "messagePlaceholder": "Raccontaci cosa pensi, quali funzionalità vorresti o eventuali problemi che hai riscontrato...",
+    "emailLabel": "Email (opzionale)",
+    "emailPlaceholder": "tua@email.com",
+    "emailHelp": "Lo useremo solo per il follow-up se necessario. La tua email non sarà condivisa.",
+    "submit": "Invia Feedback",
+    "submitting": "Invio in corso...",
+    "successTitle": "Grazie!",
+    "successDescription": "Il tuo feedback è stato ricevuto. Apprezziamo il tuo contributo!",
+    "errorTitle": "Errore",
+    "errorDescription": "Invio del feedback fallito. Riprova più tardi.",
+    "messageRequired": "Messaggio richiesto",
+    "messageRequiredDesc": "Inserisci il tuo messaggio di feedback.",
+    "devMode": "Modalità Sviluppo",
+    "devModeDesc": "Per abilitare la raccolta di feedback, aggiungi la tua chiave Web3Forms o ID Formspree a questo componente.",
+    "readEverySubmission": "Leggiamo ogni invio",
+    "inputShapesApp": "Il tuo contributo modella l'app",
+    "featureRequestsWelcome": "Le richieste di funzionalità sono benvenute"
+  },
+  "developerFeedback": {
+    "badge": "Aiutaci a Migliorare",
+    "title": "Condividi il tuo feedback",
+    "description": "Stiamo sviluppando attivamente CurrenSee e il tuo feedback ci aiuta a costruire un'app migliore. Condividi le tue idee, segnala bug o dicci cosa vorresti vedere dopo."
+  },
+  "language": {
+    "select": "Seleziona Lingua",
+    "english": "Inglese",
+    "spanish": "Spagnolo",
+    "french": "Francese",
+    "german": "Tedesco",
+    "italian": "Italiano",
+    "japanese": "Giapponese",
+    "chinese": "Cinese",
+    "portuguese": "Portoghese",
+    "russian": "Russo",
+    "arabic": "Arabo",
+    "korean": "Coreano",
+    "romanian": "Rumeno"
+  }
+}
