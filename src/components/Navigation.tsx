@@ -82,12 +82,12 @@ const Navigation = () => {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       style={{ willChange: isScrolled ? 'background-color, backdrop-filter' : 'transform' }}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-20 gap-4">
           {/* Logo */}
           <motion.button
             onClick={goToHome}
-            className="flex items-center gap-3 group cursor-pointer"
+            className="flex items-center gap-2 sm:gap-3 group cursor-pointer flex-shrink-0 min-w-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Go to home"
@@ -95,15 +95,15 @@ const Navigation = () => {
             <img
               src={currenseeLogo}
               alt="CurrenSee Logo"
-              className="w-10 h-10 rounded-xl transition-transform duration-300 group-hover:rotate-6"
+              className="w-10 h-10 rounded-xl transition-transform duration-300 group-hover:rotate-6 flex-shrink-0"
             />
-            <span className="text-xl font-bold text-foreground hidden sm:block">
+            <span className="text-xl font-bold text-foreground hidden sm:block whitespace-nowrap">
               CurrenSee
             </span>
           </motion.button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 flex-shrink min-w-0">
             <button
               onClick={() => {
                 scrollToSection("features");
@@ -113,7 +113,7 @@ const Navigation = () => {
                   // Ignore analytics errors
                 }
               }}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
             >
               {t('nav.features')}
             </button>
@@ -126,7 +126,7 @@ const Navigation = () => {
                   // Ignore analytics errors
                 }
               }}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
             >
               {t('nav.pricing')}
             </button>
@@ -139,16 +139,18 @@ const Navigation = () => {
                   // Ignore analytics errors
                 }
               }}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
             >
               {t('nav.faq')}
             </button>
-            <div className="h-6 w-px bg-border" />
-            <LanguageSwitcher />
-            <ThemeToggle />
+            <div className="h-6 w-px bg-border flex-shrink-0" />
+            <div className="flex items-center gap-2 lg:gap-3 flex-shrink-0">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
             <AppStoreBadge
               href="https://apps.apple.com/ro/app/currensee-scan/id6753315641?l=ro"
-              className="scale-90"
+              className="scale-90 flex-shrink-0"
               source="navigation"
             />
           </div>

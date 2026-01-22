@@ -30,7 +30,13 @@ export const LanguageSwitcher = () => {
     i18n.changeLanguage(langCode);
   };
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  // Extract base language code (e.g., "en-US" -> "en")
+  const baseLanguage = i18n.language.split('-')[0];
+  
+  // Find matching language, handling both full codes (e.g., "zh-CN") and base codes (e.g., "en")
+  const currentLanguage = languages.find(lang => 
+    lang.code === i18n.language || lang.code === baseLanguage
+  ) || languages.find(lang => lang.code === 'en') || languages[0];
 
   return (
     <DropdownMenu>
